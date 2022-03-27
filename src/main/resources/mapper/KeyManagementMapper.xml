@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tmonet.kms.mgmt.key.mapper.KeyManagementMapper">
+    <select id="selectHsmServiceInfo" parameterType="string" resultType="com.tmonet.kms.mgmt.common.vo.HsmServiceInfoVo">
+		SELECT
+			npi.PARTITION_ID,
+			npi.GROUP_ID,
+			nhgi.SLB_IP_ADDR,
+			nhgi.SLB_PORT
+		FROM NKM_PARTITION_INFO npi
+		INNER JOIN NKM_HSM_GROUP_INFO nhgi ON nhgi.GROUP_ID = npi.GROUP_ID
+		WHERE
+			SERVICE_ID = #{SERVICE_ID}
+	</select>
+	
+	<select id="selectKeyProfileInfo" parameterType="string" resultType="com.tmonet.kms.mgmt.key.vo.KeyProfileInfoVo">
+		SELECT
+			PROFILE_ID,
+			NAME,
+			DESCRIPTION,
+			STATUS,
+			REG_DTTM,
+			REG_USER
+		FROM NKM_KEY_PROFILE_INFO
+		WHERE
+			PROFILE_ID = #{PROFILE_ID}
+	</select>
+	
+	<select id="selectKeyProfileAttrList" parameterType="string" resultType="com.tmonet.kms.mgmt.key.vo.KeyProfileAttrListVo">
+		SELECT
+			PROFILE_ID,
+			ATTR_ID,
+			ATTR_DEFAULT,
+			REG_DTTM,
+			REG_USER
+		FROM NKM_KEY_PROFILE_ATTR_LIST
+		WHERE
+			PROFILE_ID = #{PROFILE_ID}
+	</select>
+	
+	<insert id="insertKeyList" parameterType="com.tmonet.kms.mgmt.common.vo.KeyListVo">
+        INSERT 
+        	INTO 
+       	NKM_KEY_LIST
+    	(
+    		KEY_ID,
+    		PARTITION_ID,
+    		GROUP_ID,
+    		PROFILE_ID,
+    		KEY_STATUS,
+    		REG_USER
+    	)
+    	VALUES
+    	(
+    		#{KEY_ID},
+    		#{PARTITION_ID},
+    		#{GROUP_ID},
+    		#{PROFILE_ID},
+    		#{KEY_STATUS},
+    		#{REG_USER}
+    	)
+    </insert>
+    
+    <insert id="insertKeyAttrList" parameterType="com.tmonet.kms.mgmt.common.vo.KeyAttrListVo">
+        INSERT 
+        	INTO 
+       	NKM_KEY_ATTR_LIST
+    	(
+    		KEY_ID,
+    		PARTITION_ID,
+    		GROUP_ID,
+    		ATTR_ID,
+    		ATTR_TYPE,
+    		VALUE,
+    		REG_USER
+    	)
+    	VALUES
+    	(
+    		#{KEY_ID},
+    		#{PARTITION_ID},
+    		#{GROUP_ID},
+    		#{ATTR_ID},
+    		#{ATTR_TYPE},
+    		#{VALUE},
+    		#{REG_USER}
+    	)
+    </insert>
+    
+    <insert id="insertKeyHistory" parameterType="com.tmonet.kms.mgmt.key.vo.KeyHistoryVo">
+        INSERT 
+        	INTO 
+       	NKM_KEY_HISTORY
+    	(
+    		HIST_NO,
+    		KEY_ID,
+    		PARTITION_ID,
+    		GROUP_ID,
+    		TYPE,
+    		PARAM,
+    		HMAC,
+    		REG_USER
+    	)
+    	VALUES
+    	(
+    		#{HIST_NO},
+    		#{KEY_ID},
+    		#{PARTITION_ID},
+    		#{GROUP_ID},
+    		#{TYPE},
+    		#{PARAM},
+    		#{HMAC},
+    		#{REG_USER}
+    	)
+    	
+    	<selectKey order="BEFORE" resultType="integer" keyColumn="HIST_NO" keyProperty="HIST_NO">
+    		SELECT NEXTVAL(SEQ_KEY_HIST_NO)
+		</selectKey>
+    </insert>
+    
+   	<select id="selectKeyList" parameterType="string" resultType="com.tmonet.kms.mgmt.common.vo.KeyListVo">
+		SELECT
+			KEY_ID,
+			PARTITION_ID,
+			GROUP_ID,
+			PROFILE_ID,
+			KEY_STATUS,
+			REG_DTTM,
+			REG_USER,
+			UPT_DTTM,
+			UPT_USER
+		FROM NKM_KEY_LIST
+		WHERE
+			KEY_ID = #{KEY_ID}
+	</select>
+	
+	<select id="selectKeyAttrList" parameterType="com.tmonet.kms.mgmt.common.vo.KeyListVo" resultType="com.tmonet.kms.mgmt.common.vo.KeyAttrListVo">
+		SELECT
+			KEY_ID,
+			PARTITION_ID,
+			GROUP_ID,
+			ATTR_ID,
+			ATTR_TYPE,
+			VALUE,
+			REG_DTTM,
+			REG_USER,
+			UPT_DTTM,
+			UPT_USER
+		FROM NKM_KEY_ATTR_LIST
+		WHERE
+			KEY_ID = #{KEY_ID} AND 
+			PARTITION_ID = #{PARTITION_ID} AND 
+			GROUP_ID = #{GROUP_ID}
+	</select>
+	
+    <update id="updateKeyList" parameterType="com.tmonet.kms.mgmt.common.vo.KeyListVo">
+    	UPDATE 
+    		NKM_KEY_LIST 
+    	SET
+   			KEY_STATUS = #{KEY_STATUS}
+   		WHERE
+    		KEY_ID = #{KEY_ID}
+    </update> 
+    
+    <delete id="deleteKeyList" parameterType="string">
+    	DELETE FROM
+    		NKM_KEY_LIST
+    	WHERE
+    		KEY_ID = #{KEY_ID}
+    </delete> 
+    
+    <delete id="deleteKeyAttrList" parameterType="string">
+    	DELETE FROM
+    		NKM_KEY_ATTR_LIST
+    	WHERE
+    		KEY_ID = #{KEY_ID}
+    </delete> 
+</mapper>

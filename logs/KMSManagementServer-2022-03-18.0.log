@@ -1,0 +1,1158 @@
+INFO  [2022-03-18 00:05:37] [] [Version.<clinit>():21                                       ] HV000001: Hibernate Validator 6.1.6.Final
+INFO  [2022-03-18 00:05:38] [] [StartupInfoLogger.logStarting():55                          ] Starting ManagementServerApplication on ubuntu with PID 28642 (/home/recital93/Desktop/STS4Prj2/KMS_MGMT_SERVER/KMS_MGMT_SERVER/bin/main started by recital93 in /home/recital93/Desktop/STS4Prj2/KMS_MGMT_SERVER/KMS_MGMT_SERVER)
+INFO  [2022-03-18 00:05:38] [] [SpringApplication.logStartupProfileInfo():655               ] The following profiles are active: console-logging,file-logging,local
+WARN  [2022-03-18 00:05:39] [] [Logger.warn():44                                            ] No MyBatis mapper was found in '[com.tmonet.kms.mgmt]' package. Please check your configuration.
+INFO  [2022-03-18 00:05:40] [] [TomcatWebServer.initialize():108                            ] Tomcat initialized with port(s): 7000 (http)
+INFO  [2022-03-18 00:05:40] [] [DirectJDKLog.log():173                                      ] Initializing ProtocolHandler ["http-nio-7000"]
+INFO  [2022-03-18 00:05:40] [] [DirectJDKLog.log():173                                      ] Starting service [Tomcat]
+INFO  [2022-03-18 00:05:40] [] [DirectJDKLog.log():173                                      ] Starting Servlet engine: [Apache Tomcat/9.0.39]
+INFO  [2022-03-18 00:05:40] [] [DirectJDKLog.log():173                                      ] Initializing Spring embedded WebApplicationContext
+INFO  [2022-03-18 00:05:40] [] [ServletWebServerApplicationContext.prepareWebApplicationContext():285] Root WebApplicationContext: initialization completed in 1999 ms
+INFO  [2022-03-18 00:05:41] [] [ExecutorConfigurationSupport.initialize():181               ] Initializing ExecutorService 'applicationTaskExecutor'
+INFO  [2022-03-18 00:05:41] [] [DirectJDKLog.log():173                                      ] Starting ProtocolHandler ["http-nio-7000"]
+INFO  [2022-03-18 00:05:41] [] [TomcatWebServer.start():220                                 ] Tomcat started on port(s): 7000 (http) with context path ''
+INFO  [2022-03-18 00:05:41] [] [StartupInfoLogger.logStarted():61                           ] Started ManagementServerApplication in 3.939 seconds (JVM running for 4.789)
+INFO  [2022-03-18 00:05:41] [] [ManagementServerApplication.main():24                       ] ##### START MANAGEMENT SERVER #####
+INFO  [2022-03-18 00:05:47] [] [DirectJDKLog.log():173                                      ] Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  [2022-03-18 00:05:47] [] [FrameworkServlet.initServletBean():525                      ] Initializing Servlet 'dispatcherServlet'
+INFO  [2022-03-18 00:05:47] [] [FrameworkServlet.initServletBean():547                      ] Completed initialization in 6 ms
+INFO  [2022-03-18 00:05:47] [] [GetAttributeController.selectKeyProfile():58                ] GetAttributeRequest : [
+	apiInfo=null
+	operation=[
+
+	type=Enumeration
+	value=GetAttribute
+]
+	requestPayload=[
+
+	uniqueIdentifier=[
+
+	type=TextString
+	value=4E549B3CA59A588B41268F26BA5F75C3422CAC1813C4BCB3086BC8FDBCE82BD0
+]
+]
+]
+INFO  [2022-03-18 00:05:47] [] [HikariDataSource.getConnection():110                        ] HikariPool-1 - Starting...
+INFO  [2022-03-18 00:05:47] [] [HikariDataSource.getConnection():123                        ] HikariPool-1 - Start completed.
+INFO  [2022-03-18 00:05:47] [] [GetAttributeController.selectKeyProfile():62                ] keyList Profile ID : PRF07001
+INFO  [2022-03-18 00:05:47] [] [BaseLogging.serviceBaseLogging():77                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 00:05:47] [] [BaseLogging.serviceBaseLogging():78                         ] - Start Service: SelectKeyProfileService.selectKeyProfileInfo
+INFO  [2022-03-18 00:05:47] [] [BaseLogging.serviceBaseLogging():84                         ] - Result Data  : [com.tmonet.kms.mgmt.keyprofile.vo.KeyProfileInfoVo@7a679d42]
+INFO  [2022-03-18 00:05:47] [] [BaseLogging.serviceBaseLogging():85                         ] - End Service  : SelectKeyProfileService.selectKeyProfileInfo
+INFO  [2022-03-18 00:05:47] [] [BaseLogging.serviceBaseLogging():86                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 00:05:47] [] [BaseLogging.serviceBaseLogging():77                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 00:05:47] [] [BaseLogging.serviceBaseLogging():78                         ] - Start Service: SelectKeyProfileService.selectAllKeyProfileAttrList
+INFO  [2022-03-18 00:05:47] [] [BaseLogging.serviceBaseLogging():84                         ] - Result Data  : [com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@2220c2c3, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@64ebc648, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@4ed3a4b6, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@2d392a4c, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@92bc3f2]
+INFO  [2022-03-18 00:05:47] [] [BaseLogging.serviceBaseLogging():85                         ] - End Service  : SelectKeyProfileService.selectAllKeyProfileAttrList
+INFO  [2022-03-18 00:05:47] [] [BaseLogging.serviceBaseLogging():86                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 00:05:47] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : canExportKey 1
+INFO  [2022-03-18 00:05:47] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : extractable
+INFO  [2022-03-18 00:05:47] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : cryptographicAlgorithm AES
+INFO  [2022-03-18 00:05:47] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : cryptographicAlgorithm
+INFO  [2022-03-18 00:05:47] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : keyLength 256
+INFO  [2022-03-18 00:05:47] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : cryptographicLength
+INFO  [2022-03-18 00:05:47] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : keyObjectType TP.KEY.03
+INFO  [2022-03-18 00:05:47] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : objectType
+INFO  [2022-03-18 00:05:47] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : keyUsageMask 0000001F
+INFO  [2022-03-18 00:05:47] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : cryptographicUsageMask
+INFO  [2022-03-18 00:06:35] [] [GetAttributeController.selectKeyProfile():58                ] GetAttributeRequest : [
+	apiInfo=null
+	operation=[
+
+	type=Enumeration
+	value=GetAttribute
+]
+	requestPayload=[
+
+	uniqueIdentifier=[
+
+	type=TextString
+	value=4E549B3CA59A588B41268F26BA5F75C3422CAC1813C4BCB3086BC8FDBCE82BD0
+]
+]
+]
+INFO  [2022-03-18 00:06:35] [] [GetAttributeController.selectKeyProfile():62                ] keyList Profile ID : PRF07001
+INFO  [2022-03-18 00:06:35] [] [BaseLogging.serviceBaseLogging():77                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 00:06:35] [] [BaseLogging.serviceBaseLogging():78                         ] - Start Service: SelectKeyProfileService.selectKeyProfileInfo
+INFO  [2022-03-18 00:06:35] [] [BaseLogging.serviceBaseLogging():84                         ] - Result Data  : [com.tmonet.kms.mgmt.keyprofile.vo.KeyProfileInfoVo@5c1179e7]
+INFO  [2022-03-18 00:06:35] [] [BaseLogging.serviceBaseLogging():85                         ] - End Service  : SelectKeyProfileService.selectKeyProfileInfo
+INFO  [2022-03-18 00:06:35] [] [BaseLogging.serviceBaseLogging():86                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 00:06:35] [] [BaseLogging.serviceBaseLogging():77                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 00:06:35] [] [BaseLogging.serviceBaseLogging():78                         ] - Start Service: SelectKeyProfileService.selectAllKeyProfileAttrList
+INFO  [2022-03-18 00:06:35] [] [BaseLogging.serviceBaseLogging():84                         ] - Result Data  : [com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@52d69c15, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@56e91297, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@13eb962e, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@44620bf5, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@22b20158]
+INFO  [2022-03-18 00:06:35] [] [BaseLogging.serviceBaseLogging():85                         ] - End Service  : SelectKeyProfileService.selectAllKeyProfileAttrList
+INFO  [2022-03-18 00:06:35] [] [BaseLogging.serviceBaseLogging():86                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 00:06:35] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : canExportKey 1
+INFO  [2022-03-18 00:06:35] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : extractable
+INFO  [2022-03-18 00:06:35] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : cryptographicAlgorithm AES
+INFO  [2022-03-18 00:06:35] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : cryptographicAlgorithm
+INFO  [2022-03-18 00:06:35] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : keyLength 256
+INFO  [2022-03-18 00:06:35] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : cryptographicLength
+INFO  [2022-03-18 00:06:35] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : keyObjectType TP.KEY.03
+INFO  [2022-03-18 00:06:35] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : objectType
+INFO  [2022-03-18 00:06:35] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : keyUsageMask 0000001F
+INFO  [2022-03-18 00:06:35] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : cryptographicUsageMask
+INFO  [2022-03-18 00:09:14] [] [Version.<clinit>():21                                       ] HV000001: Hibernate Validator 6.1.6.Final
+INFO  [2022-03-18 00:09:14] [] [StartupInfoLogger.logStarting():55                          ] Starting ManagementServerApplication on ubuntu with PID 29287 (/home/recital93/Desktop/STS4Prj2/KMS_MGMT_SERVER/KMS_MGMT_SERVER/bin/main started by recital93 in /home/recital93/Desktop/STS4Prj2/KMS_MGMT_SERVER/KMS_MGMT_SERVER)
+INFO  [2022-03-18 00:09:14] [] [SpringApplication.logStartupProfileInfo():655               ] The following profiles are active: console-logging,file-logging,local
+WARN  [2022-03-18 00:09:16] [] [Logger.warn():44                                            ] No MyBatis mapper was found in '[com.tmonet.kms.mgmt]' package. Please check your configuration.
+INFO  [2022-03-18 00:09:16] [] [TomcatWebServer.initialize():108                            ] Tomcat initialized with port(s): 7000 (http)
+INFO  [2022-03-18 00:09:16] [] [DirectJDKLog.log():173                                      ] Initializing ProtocolHandler ["http-nio-7000"]
+INFO  [2022-03-18 00:09:16] [] [DirectJDKLog.log():173                                      ] Starting service [Tomcat]
+INFO  [2022-03-18 00:09:16] [] [DirectJDKLog.log():173                                      ] Starting Servlet engine: [Apache Tomcat/9.0.39]
+INFO  [2022-03-18 00:09:16] [] [DirectJDKLog.log():173                                      ] Initializing Spring embedded WebApplicationContext
+INFO  [2022-03-18 00:09:16] [] [ServletWebServerApplicationContext.prepareWebApplicationContext():285] Root WebApplicationContext: initialization completed in 2439 ms
+INFO  [2022-03-18 00:09:18] [] [ExecutorConfigurationSupport.initialize():181               ] Initializing ExecutorService 'applicationTaskExecutor'
+INFO  [2022-03-18 00:09:18] [] [DirectJDKLog.log():173                                      ] Starting ProtocolHandler ["http-nio-7000"]
+INFO  [2022-03-18 00:09:18] [] [TomcatWebServer.start():220                                 ] Tomcat started on port(s): 7000 (http) with context path ''
+INFO  [2022-03-18 00:09:18] [] [StartupInfoLogger.logStarted():61                           ] Started ManagementServerApplication in 4.894 seconds (JVM running for 5.793)
+INFO  [2022-03-18 00:09:18] [] [ManagementServerApplication.main():24                       ] ##### START MANAGEMENT SERVER #####
+INFO  [2022-03-18 00:09:23] [] [DirectJDKLog.log():173                                      ] Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  [2022-03-18 00:09:23] [] [FrameworkServlet.initServletBean():525                      ] Initializing Servlet 'dispatcherServlet'
+INFO  [2022-03-18 00:09:23] [] [FrameworkServlet.initServletBean():547                      ] Completed initialization in 10 ms
+INFO  [2022-03-18 00:09:23] [] [GetAttributeController.selectKeyProfile():58                ] GetAttributeRequest : [
+	apiInfo=null
+	operation=[
+
+	type=Enumeration
+	value=GetAttribute
+]
+	requestPayload=[
+
+	uniqueIdentifier=[
+
+	type=TextString
+	value=4E549B3CA59A588B41268F26BA5F75C3422CAC1813C4BCB3086BC8FDBCE82BD0
+]
+]
+]
+INFO  [2022-03-18 00:09:23] [] [HikariDataSource.getConnection():110                        ] HikariPool-1 - Starting...
+INFO  [2022-03-18 00:09:23] [] [HikariDataSource.getConnection():123                        ] HikariPool-1 - Start completed.
+INFO  [2022-03-18 00:09:23] [] [GetAttributeController.selectKeyProfile():62                ] keyList Profile ID : PRF07001
+INFO  [2022-03-18 00:09:23] [] [BaseLogging.serviceBaseLogging():77                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 00:09:23] [] [BaseLogging.serviceBaseLogging():78                         ] - Start Service: SelectKeyProfileService.selectKeyProfileInfo
+INFO  [2022-03-18 00:09:23] [] [BaseLogging.serviceBaseLogging():84                         ] - Result Data  : [com.tmonet.kms.mgmt.keyprofile.vo.KeyProfileInfoVo@3eee5390]
+INFO  [2022-03-18 00:09:23] [] [BaseLogging.serviceBaseLogging():85                         ] - End Service  : SelectKeyProfileService.selectKeyProfileInfo
+INFO  [2022-03-18 00:09:23] [] [BaseLogging.serviceBaseLogging():86                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 00:09:23] [] [BaseLogging.serviceBaseLogging():77                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 00:09:23] [] [BaseLogging.serviceBaseLogging():78                         ] - Start Service: SelectKeyProfileService.selectAllKeyProfileAttrList
+INFO  [2022-03-18 00:09:23] [] [BaseLogging.serviceBaseLogging():84                         ] - Result Data  : [com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@7202b314, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@3e3c1c17, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@6e3c650d, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@6692ec38, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@16f79ed]
+INFO  [2022-03-18 00:09:23] [] [BaseLogging.serviceBaseLogging():85                         ] - End Service  : SelectKeyProfileService.selectAllKeyProfileAttrList
+INFO  [2022-03-18 00:09:23] [] [BaseLogging.serviceBaseLogging():86                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 00:09:23] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : canExportKey 1
+INFO  [2022-03-18 00:09:23] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : extractable
+INFO  [2022-03-18 00:09:23] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : cryptographicAlgorithm AES
+INFO  [2022-03-18 00:09:23] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : cryptographicAlgorithm
+INFO  [2022-03-18 00:09:23] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : keyLength 256
+INFO  [2022-03-18 00:09:23] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : cryptographicLength
+INFO  [2022-03-18 00:09:23] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : keyObjectType TP.KEY.03
+INFO  [2022-03-18 00:09:23] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : objectType
+INFO  [2022-03-18 00:09:23] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : keyUsageMask 0000001F
+INFO  [2022-03-18 00:09:23] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : cryptographicUsageMask
+INFO  [2022-03-18 00:09:31] [] [GetAttributeController.selectKeyProfile():145               ] byteArray[0] : 0
+INFO  [2022-03-18 00:09:33] [] [GetAttributeController.selectKeyProfile():146               ] byteArray[1] : 0
+INFO  [2022-03-18 00:11:21] [] [StartupInfoLogger.logStarting():55                          ] Starting ManagementServerApplication on ubuntu with PID 29492 (/home/recital93/Desktop/STS4Prj2/KMS_MGMT_SERVER/KMS_MGMT_SERVER/bin/main started by recital93 in /home/recital93/Desktop/STS4Prj2/KMS_MGMT_SERVER/KMS_MGMT_SERVER)
+INFO  [2022-03-18 00:11:21] [] [SpringApplication.logStartupProfileInfo():655               ] The following profiles are active: console-logging,file-logging,local
+INFO  [2022-03-18 00:11:21] [] [Version.<clinit>():21                                       ] HV000001: Hibernate Validator 6.1.6.Final
+WARN  [2022-03-18 00:11:22] [] [Logger.warn():44                                            ] No MyBatis mapper was found in '[com.tmonet.kms.mgmt]' package. Please check your configuration.
+INFO  [2022-03-18 00:11:23] [] [TomcatWebServer.initialize():108                            ] Tomcat initialized with port(s): 7000 (http)
+INFO  [2022-03-18 00:11:23] [] [DirectJDKLog.log():173                                      ] Initializing ProtocolHandler ["http-nio-7000"]
+INFO  [2022-03-18 00:11:23] [] [DirectJDKLog.log():173                                      ] Starting service [Tomcat]
+INFO  [2022-03-18 00:11:23] [] [DirectJDKLog.log():173                                      ] Starting Servlet engine: [Apache Tomcat/9.0.39]
+INFO  [2022-03-18 00:11:23] [] [DirectJDKLog.log():173                                      ] Initializing Spring embedded WebApplicationContext
+INFO  [2022-03-18 00:11:23] [] [ServletWebServerApplicationContext.prepareWebApplicationContext():285] Root WebApplicationContext: initialization completed in 2032 ms
+INFO  [2022-03-18 00:11:24] [] [ExecutorConfigurationSupport.initialize():181               ] Initializing ExecutorService 'applicationTaskExecutor'
+INFO  [2022-03-18 00:11:25] [] [DirectJDKLog.log():173                                      ] Starting ProtocolHandler ["http-nio-7000"]
+INFO  [2022-03-18 00:11:25] [] [TomcatWebServer.start():220                                 ] Tomcat started on port(s): 7000 (http) with context path ''
+INFO  [2022-03-18 00:11:25] [] [StartupInfoLogger.logStarted():61                           ] Started ManagementServerApplication in 5.351 seconds (JVM running for 6.34)
+INFO  [2022-03-18 00:11:25] [] [ManagementServerApplication.main():24                       ] ##### START MANAGEMENT SERVER #####
+INFO  [2022-03-18 00:11:30] [] [DirectJDKLog.log():173                                      ] Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  [2022-03-18 00:11:30] [] [FrameworkServlet.initServletBean():525                      ] Initializing Servlet 'dispatcherServlet'
+INFO  [2022-03-18 00:11:30] [] [FrameworkServlet.initServletBean():547                      ] Completed initialization in 11 ms
+INFO  [2022-03-18 00:11:30] [] [GetAttributeController.selectKeyProfile():58                ] GetAttributeRequest : [
+	apiInfo=null
+	operation=[
+
+	type=Enumeration
+	value=GetAttribute
+]
+	requestPayload=[
+
+	uniqueIdentifier=[
+
+	type=TextString
+	value=4E549B3CA59A588B41268F26BA5F75C3422CAC1813C4BCB3086BC8FDBCE82BD0
+]
+]
+]
+INFO  [2022-03-18 00:11:30] [] [HikariDataSource.getConnection():110                        ] HikariPool-1 - Starting...
+INFO  [2022-03-18 00:11:30] [] [HikariDataSource.getConnection():123                        ] HikariPool-1 - Start completed.
+INFO  [2022-03-18 00:11:30] [] [GetAttributeController.selectKeyProfile():62                ] keyList Profile ID : PRF07001
+INFO  [2022-03-18 00:11:30] [] [BaseLogging.serviceBaseLogging():77                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 00:11:30] [] [BaseLogging.serviceBaseLogging():78                         ] - Start Service: SelectKeyProfileService.selectKeyProfileInfo
+INFO  [2022-03-18 00:11:30] [] [BaseLogging.serviceBaseLogging():84                         ] - Result Data  : [com.tmonet.kms.mgmt.keyprofile.vo.KeyProfileInfoVo@a047b21]
+INFO  [2022-03-18 00:11:30] [] [BaseLogging.serviceBaseLogging():85                         ] - End Service  : SelectKeyProfileService.selectKeyProfileInfo
+INFO  [2022-03-18 00:11:30] [] [BaseLogging.serviceBaseLogging():86                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 00:11:30] [] [BaseLogging.serviceBaseLogging():77                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 00:11:30] [] [BaseLogging.serviceBaseLogging():78                         ] - Start Service: SelectKeyProfileService.selectAllKeyProfileAttrList
+INFO  [2022-03-18 00:11:30] [] [BaseLogging.serviceBaseLogging():84                         ] - Result Data  : [com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@255e7711, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@c2adde8, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@2d4de46a, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@40d83da, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@523d9ab5]
+INFO  [2022-03-18 00:11:30] [] [BaseLogging.serviceBaseLogging():85                         ] - End Service  : SelectKeyProfileService.selectAllKeyProfileAttrList
+INFO  [2022-03-18 00:11:30] [] [BaseLogging.serviceBaseLogging():86                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 00:11:30] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : canExportKey 1
+INFO  [2022-03-18 00:11:30] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : extractable
+INFO  [2022-03-18 00:11:30] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : cryptographicAlgorithm AES
+INFO  [2022-03-18 00:11:30] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : cryptographicAlgorithm
+INFO  [2022-03-18 00:11:30] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : keyLength 256
+INFO  [2022-03-18 00:11:30] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : cryptographicLength
+INFO  [2022-03-18 00:11:30] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : keyObjectType TP.KEY.03
+INFO  [2022-03-18 00:11:30] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : objectType
+INFO  [2022-03-18 00:11:30] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : keyUsageMask 0000001F
+INFO  [2022-03-18 00:11:30] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : cryptographicUsageMask
+INFO  [2022-03-18 00:11:38] [] [GetAttributeController.selectKeyProfile():145               ] byteArray[0] : 2
+INFO  [2022-03-18 00:11:40] [] [GetAttributeController.selectKeyProfile():146               ] byteArray[1] : 10
+INFO  [2022-03-18 00:12:42] [] [Version.<clinit>():21                                       ] HV000001: Hibernate Validator 6.1.6.Final
+INFO  [2022-03-18 00:12:42] [] [StartupInfoLogger.logStarting():55                          ] Starting ManagementServerApplication on ubuntu with PID 29631 (/home/recital93/Desktop/STS4Prj2/KMS_MGMT_SERVER/KMS_MGMT_SERVER/bin/main started by recital93 in /home/recital93/Desktop/STS4Prj2/KMS_MGMT_SERVER/KMS_MGMT_SERVER)
+INFO  [2022-03-18 00:12:42] [] [SpringApplication.logStartupProfileInfo():655               ] The following profiles are active: console-logging,file-logging,local
+WARN  [2022-03-18 00:12:44] [] [Logger.warn():44                                            ] No MyBatis mapper was found in '[com.tmonet.kms.mgmt]' package. Please check your configuration.
+INFO  [2022-03-18 00:12:45] [] [TomcatWebServer.initialize():108                            ] Tomcat initialized with port(s): 7000 (http)
+INFO  [2022-03-18 00:12:45] [] [DirectJDKLog.log():173                                      ] Initializing ProtocolHandler ["http-nio-7000"]
+INFO  [2022-03-18 00:12:45] [] [DirectJDKLog.log():173                                      ] Starting service [Tomcat]
+INFO  [2022-03-18 00:12:45] [] [DirectJDKLog.log():173                                      ] Starting Servlet engine: [Apache Tomcat/9.0.39]
+INFO  [2022-03-18 00:12:45] [] [DirectJDKLog.log():173                                      ] Initializing Spring embedded WebApplicationContext
+INFO  [2022-03-18 00:12:45] [] [ServletWebServerApplicationContext.prepareWebApplicationContext():285] Root WebApplicationContext: initialization completed in 3280 ms
+INFO  [2022-03-18 00:12:47] [] [ExecutorConfigurationSupport.initialize():181               ] Initializing ExecutorService 'applicationTaskExecutor'
+INFO  [2022-03-18 00:12:48] [] [DirectJDKLog.log():173                                      ] Starting ProtocolHandler ["http-nio-7000"]
+INFO  [2022-03-18 00:12:48] [] [TomcatWebServer.start():220                                 ] Tomcat started on port(s): 7000 (http) with context path ''
+INFO  [2022-03-18 00:12:48] [] [StartupInfoLogger.logStarted():61                           ] Started ManagementServerApplication in 6.271 seconds (JVM running for 7.397)
+INFO  [2022-03-18 00:12:48] [] [ManagementServerApplication.main():24                       ] ##### START MANAGEMENT SERVER #####
+INFO  [2022-03-18 00:12:52] [] [DirectJDKLog.log():173                                      ] Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  [2022-03-18 00:12:52] [] [FrameworkServlet.initServletBean():525                      ] Initializing Servlet 'dispatcherServlet'
+INFO  [2022-03-18 00:12:52] [] [FrameworkServlet.initServletBean():547                      ] Completed initialization in 10 ms
+INFO  [2022-03-18 00:12:52] [] [GetAttributeController.selectKeyProfile():58                ] GetAttributeRequest : [
+	apiInfo=null
+	operation=[
+
+	type=Enumeration
+	value=GetAttribute
+]
+	requestPayload=[
+
+	uniqueIdentifier=[
+
+	type=TextString
+	value=4E549B3CA59A588B41268F26BA5F75C3422CAC1813C4BCB3086BC8FDBCE82BD0
+]
+]
+]
+INFO  [2022-03-18 00:12:52] [] [HikariDataSource.getConnection():110                        ] HikariPool-1 - Starting...
+INFO  [2022-03-18 00:12:52] [] [HikariDataSource.getConnection():123                        ] HikariPool-1 - Start completed.
+INFO  [2022-03-18 00:12:52] [] [GetAttributeController.selectKeyProfile():62                ] keyList Profile ID : PRF07001
+INFO  [2022-03-18 00:12:52] [] [BaseLogging.serviceBaseLogging():77                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 00:12:52] [] [BaseLogging.serviceBaseLogging():78                         ] - Start Service: SelectKeyProfileService.selectKeyProfileInfo
+INFO  [2022-03-18 00:12:52] [] [BaseLogging.serviceBaseLogging():84                         ] - Result Data  : [com.tmonet.kms.mgmt.keyprofile.vo.KeyProfileInfoVo@481e722b]
+INFO  [2022-03-18 00:12:52] [] [BaseLogging.serviceBaseLogging():85                         ] - End Service  : SelectKeyProfileService.selectKeyProfileInfo
+INFO  [2022-03-18 00:12:52] [] [BaseLogging.serviceBaseLogging():86                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 00:12:52] [] [BaseLogging.serviceBaseLogging():77                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 00:12:52] [] [BaseLogging.serviceBaseLogging():78                         ] - Start Service: SelectKeyProfileService.selectAllKeyProfileAttrList
+INFO  [2022-03-18 00:12:52] [] [BaseLogging.serviceBaseLogging():84                         ] - Result Data  : [com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@77bb0c9c, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@4c0fa76a, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@2da96779, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@7db534be, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@52c51878]
+INFO  [2022-03-18 00:12:52] [] [BaseLogging.serviceBaseLogging():85                         ] - End Service  : SelectKeyProfileService.selectAllKeyProfileAttrList
+INFO  [2022-03-18 00:12:52] [] [BaseLogging.serviceBaseLogging():86                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 00:12:52] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : canExportKey 1
+INFO  [2022-03-18 00:12:52] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : extractable
+INFO  [2022-03-18 00:12:52] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : cryptographicAlgorithm AES
+INFO  [2022-03-18 00:12:52] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : cryptographicAlgorithm
+INFO  [2022-03-18 00:12:52] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : keyLength 256
+INFO  [2022-03-18 00:12:52] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : cryptographicLength
+INFO  [2022-03-18 00:12:52] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : keyObjectType TP.KEY.03
+INFO  [2022-03-18 00:12:52] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : objectType
+INFO  [2022-03-18 00:12:52] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : keyUsageMask 0000001F
+INFO  [2022-03-18 00:12:52] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : cryptographicUsageMask
+INFO  [2022-03-18 00:12:57] [] [GetAttributeController.selectKeyProfile():145               ] byteArray[0] : 2
+INFO  [2022-03-18 00:12:58] [] [GetAttributeController.selectKeyProfile():146               ] byteArray[1] : 10
+INFO  [2022-03-18 00:25:20] [] [Version.<clinit>():21                                       ] HV000001: Hibernate Validator 6.1.6.Final
+INFO  [2022-03-18 00:25:20] [] [StartupInfoLogger.logStarting():55                          ] Starting ManagementServerApplication on ubuntu with PID 31323 (/home/recital93/Desktop/STS4Prj2/KMS_MGMT_SERVER/KMS_MGMT_SERVER/bin/main started by recital93 in /home/recital93/Desktop/STS4Prj2/KMS_MGMT_SERVER/KMS_MGMT_SERVER)
+INFO  [2022-03-18 00:25:20] [] [SpringApplication.logStartupProfileInfo():655               ] The following profiles are active: console-logging,file-logging,local
+WARN  [2022-03-18 00:25:22] [] [Logger.warn():44                                            ] No MyBatis mapper was found in '[com.tmonet.kms.mgmt]' package. Please check your configuration.
+INFO  [2022-03-18 00:25:22] [] [TomcatWebServer.initialize():108                            ] Tomcat initialized with port(s): 7000 (http)
+INFO  [2022-03-18 00:25:22] [] [DirectJDKLog.log():173                                      ] Initializing ProtocolHandler ["http-nio-7000"]
+INFO  [2022-03-18 00:25:22] [] [DirectJDKLog.log():173                                      ] Starting service [Tomcat]
+INFO  [2022-03-18 00:25:22] [] [DirectJDKLog.log():173                                      ] Starting Servlet engine: [Apache Tomcat/9.0.39]
+INFO  [2022-03-18 00:25:23] [] [DirectJDKLog.log():173                                      ] Initializing Spring embedded WebApplicationContext
+INFO  [2022-03-18 00:25:23] [] [ServletWebServerApplicationContext.prepareWebApplicationContext():285] Root WebApplicationContext: initialization completed in 2176 ms
+INFO  [2022-03-18 00:25:24] [] [ExecutorConfigurationSupport.initialize():181               ] Initializing ExecutorService 'applicationTaskExecutor'
+INFO  [2022-03-18 00:25:24] [] [DirectJDKLog.log():173                                      ] Starting ProtocolHandler ["http-nio-7000"]
+INFO  [2022-03-18 00:25:24] [] [TomcatWebServer.start():220                                 ] Tomcat started on port(s): 7000 (http) with context path ''
+INFO  [2022-03-18 00:25:24] [] [StartupInfoLogger.logStarted():61                           ] Started ManagementServerApplication in 4.62 seconds (JVM running for 6.381)
+INFO  [2022-03-18 00:25:24] [] [ManagementServerApplication.main():24                       ] ##### START MANAGEMENT SERVER #####
+INFO  [2022-03-18 00:25:30] [] [DirectJDKLog.log():173                                      ] Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  [2022-03-18 00:25:30] [] [FrameworkServlet.initServletBean():525                      ] Initializing Servlet 'dispatcherServlet'
+INFO  [2022-03-18 00:25:30] [] [FrameworkServlet.initServletBean():547                      ] Completed initialization in 10 ms
+INFO  [2022-03-18 00:25:30] [] [GetAttributeController.selectKeyProfile():58                ] GetAttributeRequest : [
+	apiInfo=null
+	operation=[
+
+	type=Enumeration
+	value=GetAttribute
+]
+	requestPayload=[
+
+	uniqueIdentifier=[
+
+	type=TextString
+	value=4E549B3CA59A588B41268F26BA5F75C3422CAC1813C4BCB3086BC8FDBCE82BD0
+]
+]
+]
+INFO  [2022-03-18 00:25:30] [] [HikariDataSource.getConnection():110                        ] HikariPool-1 - Starting...
+INFO  [2022-03-18 00:25:30] [] [HikariDataSource.getConnection():123                        ] HikariPool-1 - Start completed.
+INFO  [2022-03-18 00:25:30] [] [GetAttributeController.selectKeyProfile():62                ] keyList Profile ID : PRF07001
+INFO  [2022-03-18 00:25:30] [] [BaseLogging.serviceBaseLogging():77                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 00:25:30] [] [BaseLogging.serviceBaseLogging():78                         ] - Start Service: SelectKeyProfileService.selectKeyProfileInfo
+INFO  [2022-03-18 00:25:30] [] [BaseLogging.serviceBaseLogging():84                         ] - Result Data  : [com.tmonet.kms.mgmt.keyprofile.vo.KeyProfileInfoVo@282e766b]
+INFO  [2022-03-18 00:25:30] [] [BaseLogging.serviceBaseLogging():85                         ] - End Service  : SelectKeyProfileService.selectKeyProfileInfo
+INFO  [2022-03-18 00:25:30] [] [BaseLogging.serviceBaseLogging():86                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 00:25:30] [] [BaseLogging.serviceBaseLogging():77                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 00:25:30] [] [BaseLogging.serviceBaseLogging():78                         ] - Start Service: SelectKeyProfileService.selectAllKeyProfileAttrList
+INFO  [2022-03-18 00:25:30] [] [BaseLogging.serviceBaseLogging():84                         ] - Result Data  : [com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@3f04094e, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@64c2adeb, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@d34b488, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@3e0397cb, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@21d2b73c]
+INFO  [2022-03-18 00:25:30] [] [BaseLogging.serviceBaseLogging():85                         ] - End Service  : SelectKeyProfileService.selectAllKeyProfileAttrList
+INFO  [2022-03-18 00:25:30] [] [BaseLogging.serviceBaseLogging():86                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 00:25:30] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : canExportKey 1
+INFO  [2022-03-18 00:25:30] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : extractable
+INFO  [2022-03-18 00:25:30] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : cryptographicAlgorithm AES
+INFO  [2022-03-18 00:25:30] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : cryptographicAlgorithm
+INFO  [2022-03-18 00:25:30] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : keyLength 256
+INFO  [2022-03-18 00:25:30] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : cryptographicLength
+INFO  [2022-03-18 00:25:30] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : keyObjectType TP.KEY.03
+INFO  [2022-03-18 00:25:30] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : objectType
+INFO  [2022-03-18 00:25:30] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : keyUsageMask 0000001F
+INFO  [2022-03-18 00:25:30] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : cryptographicUsageMask
+INFO  [2022-03-18 00:25:43] [] [GetAttributeController.selectKeyProfile():147               ] byteArray[0] : 2
+INFO  [2022-03-18 00:25:44] [] [GetAttributeController.selectKeyProfile():148               ] byteArray[1] : 10
+INFO  [2022-03-18 00:28:18] [] [StartupInfoLogger.logStarting():55                          ] Starting ManagementServerApplication on ubuntu with PID 31653 (/home/recital93/Desktop/STS4Prj2/KMS_MGMT_SERVER/KMS_MGMT_SERVER/bin/main started by recital93 in /home/recital93/Desktop/STS4Prj2/KMS_MGMT_SERVER/KMS_MGMT_SERVER)
+INFO  [2022-03-18 00:28:18] [] [SpringApplication.logStartupProfileInfo():655               ] The following profiles are active: console-logging,file-logging,local
+INFO  [2022-03-18 00:28:18] [] [Version.<clinit>():21                                       ] HV000001: Hibernate Validator 6.1.6.Final
+WARN  [2022-03-18 00:28:20] [] [Logger.warn():44                                            ] No MyBatis mapper was found in '[com.tmonet.kms.mgmt]' package. Please check your configuration.
+INFO  [2022-03-18 00:28:20] [] [TomcatWebServer.initialize():108                            ] Tomcat initialized with port(s): 7000 (http)
+INFO  [2022-03-18 00:28:20] [] [DirectJDKLog.log():173                                      ] Initializing ProtocolHandler ["http-nio-7000"]
+INFO  [2022-03-18 00:28:20] [] [DirectJDKLog.log():173                                      ] Starting service [Tomcat]
+INFO  [2022-03-18 00:28:20] [] [DirectJDKLog.log():173                                      ] Starting Servlet engine: [Apache Tomcat/9.0.39]
+INFO  [2022-03-18 00:28:20] [] [DirectJDKLog.log():173                                      ] Initializing Spring embedded WebApplicationContext
+INFO  [2022-03-18 00:28:20] [] [ServletWebServerApplicationContext.prepareWebApplicationContext():285] Root WebApplicationContext: initialization completed in 2620 ms
+INFO  [2022-03-18 00:28:22] [] [ExecutorConfigurationSupport.initialize():181               ] Initializing ExecutorService 'applicationTaskExecutor'
+INFO  [2022-03-18 00:28:23] [] [DirectJDKLog.log():173                                      ] Starting ProtocolHandler ["http-nio-7000"]
+INFO  [2022-03-18 00:28:23] [] [TomcatWebServer.start():220                                 ] Tomcat started on port(s): 7000 (http) with context path ''
+INFO  [2022-03-18 00:28:23] [] [StartupInfoLogger.logStarted():61                           ] Started ManagementServerApplication in 5.662 seconds (JVM running for 6.558)
+INFO  [2022-03-18 00:28:23] [] [ManagementServerApplication.main():24                       ] ##### START MANAGEMENT SERVER #####
+INFO  [2022-03-18 00:28:27] [] [DirectJDKLog.log():173                                      ] Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  [2022-03-18 00:28:27] [] [FrameworkServlet.initServletBean():525                      ] Initializing Servlet 'dispatcherServlet'
+INFO  [2022-03-18 00:28:27] [] [FrameworkServlet.initServletBean():547                      ] Completed initialization in 8 ms
+INFO  [2022-03-18 00:28:28] [] [GetAttributeController.selectKeyProfile():58                ] GetAttributeRequest : [
+	apiInfo=null
+	operation=[
+
+	type=Enumeration
+	value=GetAttribute
+]
+	requestPayload=[
+
+	uniqueIdentifier=[
+
+	type=TextString
+	value=4E549B3CA59A588B41268F26BA5F75C3422CAC1813C4BCB3086BC8FDBCE82BD0
+]
+]
+]
+INFO  [2022-03-18 00:28:28] [] [HikariDataSource.getConnection():110                        ] HikariPool-1 - Starting...
+INFO  [2022-03-18 00:28:28] [] [HikariDataSource.getConnection():123                        ] HikariPool-1 - Start completed.
+INFO  [2022-03-18 00:28:28] [] [GetAttributeController.selectKeyProfile():62                ] keyList Profile ID : PRF07001
+INFO  [2022-03-18 00:28:28] [] [BaseLogging.serviceBaseLogging():77                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 00:28:28] [] [BaseLogging.serviceBaseLogging():78                         ] - Start Service: SelectKeyProfileService.selectKeyProfileInfo
+INFO  [2022-03-18 00:28:28] [] [BaseLogging.serviceBaseLogging():84                         ] - Result Data  : [com.tmonet.kms.mgmt.keyprofile.vo.KeyProfileInfoVo@721c3485]
+INFO  [2022-03-18 00:28:28] [] [BaseLogging.serviceBaseLogging():85                         ] - End Service  : SelectKeyProfileService.selectKeyProfileInfo
+INFO  [2022-03-18 00:28:28] [] [BaseLogging.serviceBaseLogging():86                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 00:28:28] [] [BaseLogging.serviceBaseLogging():77                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 00:28:28] [] [BaseLogging.serviceBaseLogging():78                         ] - Start Service: SelectKeyProfileService.selectAllKeyProfileAttrList
+INFO  [2022-03-18 00:28:28] [] [BaseLogging.serviceBaseLogging():84                         ] - Result Data  : [com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@6aec60ed, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@7947c929, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@3b611091, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@20e85aba, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@290aad42]
+INFO  [2022-03-18 00:28:28] [] [BaseLogging.serviceBaseLogging():85                         ] - End Service  : SelectKeyProfileService.selectAllKeyProfileAttrList
+INFO  [2022-03-18 00:28:28] [] [BaseLogging.serviceBaseLogging():86                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 00:28:28] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : canExportKey 1
+INFO  [2022-03-18 00:28:28] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : extractable
+INFO  [2022-03-18 00:28:28] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : cryptographicAlgorithm AES
+INFO  [2022-03-18 00:28:28] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : cryptographicAlgorithm
+INFO  [2022-03-18 00:28:28] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : keyLength 256
+INFO  [2022-03-18 00:28:28] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : cryptographicLength
+INFO  [2022-03-18 00:28:28] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : keyObjectType TP.KEY.03
+INFO  [2022-03-18 00:28:28] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : objectType
+INFO  [2022-03-18 00:28:28] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : keyUsageMask 0000001F
+INFO  [2022-03-18 00:28:28] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : cryptographicUsageMask
+INFO  [2022-03-18 00:28:37] [] [GetAttributeController.selectKeyProfile():147               ] byteArray[0] : 2
+INFO  [2022-03-18 00:28:38] [] [GetAttributeController.selectKeyProfile():148               ] byteArray[1] : 10
+INFO  [2022-03-18 00:29:50] [] [GetAttributeController.selectKeyProfile():154               ] hex3 : 1000001011
+INFO  [2022-03-18 00:29:51] [] [GetAttributeController.selectKeyProfile():155               ] hex4 : 20b
+INFO  [2022-03-18 02:15:22] [] [Version.<clinit>():21                                       ] HV000001: Hibernate Validator 6.1.6.Final
+INFO  [2022-03-18 02:15:22] [] [StartupInfoLogger.logStarting():55                          ] Starting ManagementServerApplication on ubuntu with PID 42832 (/home/recital93/Desktop/STS4Prj2/KMS_MGMT_SERVER/KMS_MGMT_SERVER/bin/main started by recital93 in /home/recital93/Desktop/STS4Prj2/KMS_MGMT_SERVER/KMS_MGMT_SERVER)
+INFO  [2022-03-18 02:15:22] [] [SpringApplication.logStartupProfileInfo():655               ] The following profiles are active: console-logging,file-logging,local
+WARN  [2022-03-18 02:15:24] [] [Logger.warn():44                                            ] No MyBatis mapper was found in '[com.tmonet.kms.mgmt]' package. Please check your configuration.
+INFO  [2022-03-18 02:15:24] [] [TomcatWebServer.initialize():108                            ] Tomcat initialized with port(s): 7000 (http)
+INFO  [2022-03-18 02:15:24] [] [DirectJDKLog.log():173                                      ] Initializing ProtocolHandler ["http-nio-7000"]
+INFO  [2022-03-18 02:15:24] [] [DirectJDKLog.log():173                                      ] Starting service [Tomcat]
+INFO  [2022-03-18 02:15:24] [] [DirectJDKLog.log():173                                      ] Starting Servlet engine: [Apache Tomcat/9.0.39]
+INFO  [2022-03-18 02:15:24] [] [DirectJDKLog.log():173                                      ] Initializing Spring embedded WebApplicationContext
+INFO  [2022-03-18 02:15:24] [] [ServletWebServerApplicationContext.prepareWebApplicationContext():285] Root WebApplicationContext: initialization completed in 2601 ms
+INFO  [2022-03-18 02:15:26] [] [ExecutorConfigurationSupport.initialize():181               ] Initializing ExecutorService 'applicationTaskExecutor'
+INFO  [2022-03-18 02:15:26] [] [DirectJDKLog.log():173                                      ] Starting ProtocolHandler ["http-nio-7000"]
+INFO  [2022-03-18 02:15:26] [] [TomcatWebServer.start():220                                 ] Tomcat started on port(s): 7000 (http) with context path ''
+INFO  [2022-03-18 02:15:26] [] [StartupInfoLogger.logStarted():61                           ] Started ManagementServerApplication in 5.009 seconds (JVM running for 8.2)
+INFO  [2022-03-18 02:15:26] [] [ManagementServerApplication.main():24                       ] ##### START MANAGEMENT SERVER #####
+INFO  [2022-03-18 02:15:31] [] [DirectJDKLog.log():173                                      ] Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  [2022-03-18 02:15:31] [] [FrameworkServlet.initServletBean():525                      ] Initializing Servlet 'dispatcherServlet'
+INFO  [2022-03-18 02:15:31] [] [FrameworkServlet.initServletBean():547                      ] Completed initialization in 8 ms
+INFO  [2022-03-18 02:15:31] [] [GetAttributeController.selectKeyProfile():58                ] GetAttributeRequest : [
+	apiInfo=null
+	operation=[
+
+	type=Enumeration
+	value=GetAttribute
+]
+	requestPayload=[
+
+	uniqueIdentifier=[
+
+	type=TextString
+	value=4E549B3CA59A588B41268F26BA5F75C3422CAC1813C4BCB3086BC8FDBCE82BD0
+]
+]
+]
+INFO  [2022-03-18 02:15:31] [] [HikariDataSource.getConnection():110                        ] HikariPool-1 - Starting...
+INFO  [2022-03-18 02:15:31] [] [HikariDataSource.getConnection():123                        ] HikariPool-1 - Start completed.
+INFO  [2022-03-18 02:15:31] [] [GetAttributeController.selectKeyProfile():62                ] keyList Profile ID : PRF07001
+INFO  [2022-03-18 02:15:32] [] [BaseLogging.serviceBaseLogging():77                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 02:15:32] [] [BaseLogging.serviceBaseLogging():78                         ] - Start Service: SelectKeyProfileService.selectKeyProfileInfo
+INFO  [2022-03-18 02:15:32] [] [BaseLogging.serviceBaseLogging():84                         ] - Result Data  : [com.tmonet.kms.mgmt.keyprofile.vo.KeyProfileInfoVo@76a3eaf9]
+INFO  [2022-03-18 02:15:32] [] [BaseLogging.serviceBaseLogging():85                         ] - End Service  : SelectKeyProfileService.selectKeyProfileInfo
+INFO  [2022-03-18 02:15:32] [] [BaseLogging.serviceBaseLogging():86                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 02:15:32] [] [BaseLogging.serviceBaseLogging():77                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 02:15:32] [] [BaseLogging.serviceBaseLogging():78                         ] - Start Service: SelectKeyProfileService.selectAllKeyProfileAttrList
+INFO  [2022-03-18 02:15:32] [] [BaseLogging.serviceBaseLogging():84                         ] - Result Data  : [com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@203c14cb, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@49a1d617, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@23c56217, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@3bbe3af5, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@7b64eb05]
+INFO  [2022-03-18 02:15:32] [] [BaseLogging.serviceBaseLogging():85                         ] - End Service  : SelectKeyProfileService.selectAllKeyProfileAttrList
+INFO  [2022-03-18 02:15:32] [] [BaseLogging.serviceBaseLogging():86                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 02:15:32] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : canExportKey 1
+INFO  [2022-03-18 02:15:32] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : extractable
+INFO  [2022-03-18 02:15:32] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : cryptographicAlgorithm AES
+INFO  [2022-03-18 02:15:32] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : cryptographicAlgorithm
+INFO  [2022-03-18 02:15:32] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : keyLength 256
+INFO  [2022-03-18 02:15:32] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : cryptographicLength
+INFO  [2022-03-18 02:15:32] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : keyObjectType TP.KEY.03
+INFO  [2022-03-18 02:15:32] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : objectType
+INFO  [2022-03-18 02:15:32] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : keyUsageMask 0000001F
+INFO  [2022-03-18 02:15:32] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : cryptographicUsageMask
+INFO  [2022-03-18 02:27:16] [] [Version.<clinit>():21                                       ] HV000001: Hibernate Validator 6.1.6.Final
+INFO  [2022-03-18 02:27:16] [] [StartupInfoLogger.logStarting():55                          ] Starting ManagementServerApplication on ubuntu with PID 43037 (/home/recital93/Desktop/STS4Prj2/KMS_MGMT_SERVER/KMS_MGMT_SERVER/bin/main started by recital93 in /home/recital93/Desktop/STS4Prj2/KMS_MGMT_SERVER/KMS_MGMT_SERVER)
+INFO  [2022-03-18 02:27:16] [] [SpringApplication.logStartupProfileInfo():655               ] The following profiles are active: console-logging,file-logging,local
+WARN  [2022-03-18 02:27:18] [] [Logger.warn():44                                            ] No MyBatis mapper was found in '[com.tmonet.kms.mgmt]' package. Please check your configuration.
+INFO  [2022-03-18 02:27:19] [] [TomcatWebServer.initialize():108                            ] Tomcat initialized with port(s): 7000 (http)
+INFO  [2022-03-18 02:27:19] [] [DirectJDKLog.log():173                                      ] Initializing ProtocolHandler ["http-nio-7000"]
+INFO  [2022-03-18 02:27:19] [] [DirectJDKLog.log():173                                      ] Starting service [Tomcat]
+INFO  [2022-03-18 02:27:19] [] [DirectJDKLog.log():173                                      ] Starting Servlet engine: [Apache Tomcat/9.0.39]
+INFO  [2022-03-18 02:27:19] [] [DirectJDKLog.log():173                                      ] Initializing Spring embedded WebApplicationContext
+INFO  [2022-03-18 02:27:19] [] [ServletWebServerApplicationContext.prepareWebApplicationContext():285] Root WebApplicationContext: initialization completed in 2114 ms
+INFO  [2022-03-18 02:27:20] [] [ExecutorConfigurationSupport.initialize():181               ] Initializing ExecutorService 'applicationTaskExecutor'
+INFO  [2022-03-18 02:27:20] [] [DirectJDKLog.log():173                                      ] Starting ProtocolHandler ["http-nio-7000"]
+INFO  [2022-03-18 02:27:20] [] [TomcatWebServer.start():220                                 ] Tomcat started on port(s): 7000 (http) with context path ''
+INFO  [2022-03-18 02:27:20] [] [StartupInfoLogger.logStarted():61                           ] Started ManagementServerApplication in 5.689 seconds (JVM running for 6.663)
+INFO  [2022-03-18 02:27:20] [] [ManagementServerApplication.main():24                       ] ##### START MANAGEMENT SERVER #####
+INFO  [2022-03-18 02:27:25] [] [DirectJDKLog.log():173                                      ] Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  [2022-03-18 02:27:25] [] [FrameworkServlet.initServletBean():525                      ] Initializing Servlet 'dispatcherServlet'
+INFO  [2022-03-18 02:27:25] [] [FrameworkServlet.initServletBean():547                      ] Completed initialization in 12 ms
+INFO  [2022-03-18 02:27:26] [] [GetAttributeController.selectKeyProfile():58                ] GetAttributeRequest : [
+	apiInfo=null
+	operation=[
+
+	type=Enumeration
+	value=GetAttribute
+]
+	requestPayload=[
+
+	uniqueIdentifier=[
+
+	type=TextString
+	value=4E549B3CA59A588B41268F26BA5F75C3422CAC1813C4BCB3086BC8FDBCE82BD0
+]
+]
+]
+INFO  [2022-03-18 02:27:26] [] [HikariDataSource.getConnection():110                        ] HikariPool-1 - Starting...
+INFO  [2022-03-18 02:27:26] [] [HikariDataSource.getConnection():123                        ] HikariPool-1 - Start completed.
+INFO  [2022-03-18 02:27:26] [] [GetAttributeController.selectKeyProfile():62                ] keyList Profile ID : PRF07001
+INFO  [2022-03-18 02:27:26] [] [BaseLogging.serviceBaseLogging():77                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 02:27:26] [] [BaseLogging.serviceBaseLogging():78                         ] - Start Service: SelectKeyProfileService.selectKeyProfileInfo
+INFO  [2022-03-18 02:27:26] [] [BaseLogging.serviceBaseLogging():84                         ] - Result Data  : [com.tmonet.kms.mgmt.keyprofile.vo.KeyProfileInfoVo@769610fd]
+INFO  [2022-03-18 02:27:26] [] [BaseLogging.serviceBaseLogging():85                         ] - End Service  : SelectKeyProfileService.selectKeyProfileInfo
+INFO  [2022-03-18 02:27:26] [] [BaseLogging.serviceBaseLogging():86                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 02:27:26] [] [BaseLogging.serviceBaseLogging():77                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 02:27:26] [] [BaseLogging.serviceBaseLogging():78                         ] - Start Service: SelectKeyProfileService.selectAllKeyProfileAttrList
+INFO  [2022-03-18 02:27:26] [] [BaseLogging.serviceBaseLogging():84                         ] - Result Data  : [com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@7d11cd1b, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@3bc62bbc, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@4e516db7, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@6ab971e3, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@193310ba]
+INFO  [2022-03-18 02:27:26] [] [BaseLogging.serviceBaseLogging():85                         ] - End Service  : SelectKeyProfileService.selectAllKeyProfileAttrList
+INFO  [2022-03-18 02:27:26] [] [BaseLogging.serviceBaseLogging():86                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 02:27:26] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : canExportKey 1
+INFO  [2022-03-18 02:27:26] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : extractable
+INFO  [2022-03-18 02:27:26] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : cryptographicAlgorithm AES
+INFO  [2022-03-18 02:27:26] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : cryptographicAlgorithm
+INFO  [2022-03-18 02:27:26] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : keyLength 256
+INFO  [2022-03-18 02:27:26] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : cryptographicLength
+INFO  [2022-03-18 02:27:26] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : keyObjectType TP.KEY.03
+INFO  [2022-03-18 02:27:26] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : objectType
+INFO  [2022-03-18 02:27:26] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : keyUsageMask 0000001F
+INFO  [2022-03-18 02:27:26] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : cryptographicUsageMask
+INFO  [2022-03-18 02:33:00] [] [Version.<clinit>():21                                       ] HV000001: Hibernate Validator 6.1.6.Final
+INFO  [2022-03-18 02:33:00] [] [StartupInfoLogger.logStarting():55                          ] Starting ManagementServerApplication on ubuntu with PID 43878 (/home/recital93/Desktop/STS4Prj2/KMS_MGMT_SERVER/KMS_MGMT_SERVER/bin/main started by recital93 in /home/recital93/Desktop/STS4Prj2/KMS_MGMT_SERVER/KMS_MGMT_SERVER)
+INFO  [2022-03-18 02:33:00] [] [SpringApplication.logStartupProfileInfo():655               ] The following profiles are active: console-logging,file-logging,local
+WARN  [2022-03-18 02:33:02] [] [Logger.warn():44                                            ] No MyBatis mapper was found in '[com.tmonet.kms.mgmt]' package. Please check your configuration.
+INFO  [2022-03-18 02:33:03] [] [TomcatWebServer.initialize():108                            ] Tomcat initialized with port(s): 7000 (http)
+INFO  [2022-03-18 02:33:03] [] [DirectJDKLog.log():173                                      ] Initializing ProtocolHandler ["http-nio-7000"]
+INFO  [2022-03-18 02:33:03] [] [DirectJDKLog.log():173                                      ] Starting service [Tomcat]
+INFO  [2022-03-18 02:33:03] [] [DirectJDKLog.log():173                                      ] Starting Servlet engine: [Apache Tomcat/9.0.39]
+INFO  [2022-03-18 02:33:03] [] [DirectJDKLog.log():173                                      ] Initializing Spring embedded WebApplicationContext
+INFO  [2022-03-18 02:33:03] [] [ServletWebServerApplicationContext.prepareWebApplicationContext():285] Root WebApplicationContext: initialization completed in 2574 ms
+INFO  [2022-03-18 02:33:04] [] [ExecutorConfigurationSupport.initialize():181               ] Initializing ExecutorService 'applicationTaskExecutor'
+INFO  [2022-03-18 02:33:04] [] [DirectJDKLog.log():173                                      ] Starting ProtocolHandler ["http-nio-7000"]
+INFO  [2022-03-18 02:33:04] [] [TomcatWebServer.start():220                                 ] Tomcat started on port(s): 7000 (http) with context path ''
+INFO  [2022-03-18 02:33:04] [] [StartupInfoLogger.logStarted():61                           ] Started ManagementServerApplication in 5.051 seconds (JVM running for 6.836)
+INFO  [2022-03-18 02:33:04] [] [ManagementServerApplication.main():24                       ] ##### START MANAGEMENT SERVER #####
+INFO  [2022-03-18 02:33:29] [] [DirectJDKLog.log():173                                      ] Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  [2022-03-18 02:33:29] [] [FrameworkServlet.initServletBean():525                      ] Initializing Servlet 'dispatcherServlet'
+INFO  [2022-03-18 02:33:29] [] [FrameworkServlet.initServletBean():547                      ] Completed initialization in 10 ms
+INFO  [2022-03-18 02:33:29] [] [GetAttributeController.selectKeyProfile():58                ] GetAttributeRequest : [
+	apiInfo=null
+	operation=[
+
+	type=Enumeration
+	value=GetAttribute
+]
+	requestPayload=[
+
+	uniqueIdentifier=[
+
+	type=TextString
+	value=4E549B3CA59A588B41268F26BA5F75C3422CAC1813C4BCB3086BC8FDBCE82BD0
+]
+]
+]
+INFO  [2022-03-18 02:33:29] [] [HikariDataSource.getConnection():110                        ] HikariPool-1 - Starting...
+INFO  [2022-03-18 02:33:29] [] [HikariDataSource.getConnection():123                        ] HikariPool-1 - Start completed.
+INFO  [2022-03-18 02:33:29] [] [GetAttributeController.selectKeyProfile():62                ] keyList Profile ID : PRF07001
+INFO  [2022-03-18 02:33:29] [] [BaseLogging.serviceBaseLogging():77                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 02:33:29] [] [BaseLogging.serviceBaseLogging():78                         ] - Start Service: SelectKeyProfileService.selectKeyProfileInfo
+INFO  [2022-03-18 02:33:29] [] [BaseLogging.serviceBaseLogging():84                         ] - Result Data  : [com.tmonet.kms.mgmt.keyprofile.vo.KeyProfileInfoVo@208bfd8d]
+INFO  [2022-03-18 02:33:29] [] [BaseLogging.serviceBaseLogging():85                         ] - End Service  : SelectKeyProfileService.selectKeyProfileInfo
+INFO  [2022-03-18 02:33:29] [] [BaseLogging.serviceBaseLogging():86                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 02:33:29] [] [BaseLogging.serviceBaseLogging():77                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 02:33:29] [] [BaseLogging.serviceBaseLogging():78                         ] - Start Service: SelectKeyProfileService.selectAllKeyProfileAttrList
+INFO  [2022-03-18 02:33:29] [] [BaseLogging.serviceBaseLogging():84                         ] - Result Data  : [com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@45e4b758, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@3a7c4dfc, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@6f03554d, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@fb5d25a, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@6f8bea83]
+INFO  [2022-03-18 02:33:29] [] [BaseLogging.serviceBaseLogging():85                         ] - End Service  : SelectKeyProfileService.selectAllKeyProfileAttrList
+INFO  [2022-03-18 02:33:29] [] [BaseLogging.serviceBaseLogging():86                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 02:33:29] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : canExportKey 1
+INFO  [2022-03-18 02:33:29] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : extractable
+INFO  [2022-03-18 02:33:29] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : cryptographicAlgorithm AES
+INFO  [2022-03-18 02:33:29] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : cryptographicAlgorithm
+INFO  [2022-03-18 02:33:29] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : keyLength 256
+INFO  [2022-03-18 02:33:29] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : cryptographicLength
+INFO  [2022-03-18 02:33:29] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : keyObjectType TP.KEY.03
+INFO  [2022-03-18 02:33:29] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : objectType
+INFO  [2022-03-18 02:33:29] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : keyUsageMask 0000001F
+INFO  [2022-03-18 02:33:29] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : cryptographicUsageMask
+INFO  [2022-03-18 02:34:20] [] [GetAttributeController.makeKMIPAttributesTypeValue():177    ] masks : Sign Verify Encrypt Decrypt Wrap Key 
+INFO  [2022-03-18 02:36:06] [] [Version.<clinit>():21                                       ] HV000001: Hibernate Validator 6.1.6.Final
+INFO  [2022-03-18 02:36:06] [] [StartupInfoLogger.logStarting():55                          ] Starting ManagementServerApplication on ubuntu with PID 44321 (/home/recital93/Desktop/STS4Prj2/KMS_MGMT_SERVER/KMS_MGMT_SERVER/bin/main started by recital93 in /home/recital93/Desktop/STS4Prj2/KMS_MGMT_SERVER/KMS_MGMT_SERVER)
+INFO  [2022-03-18 02:36:06] [] [SpringApplication.logStartupProfileInfo():655               ] The following profiles are active: console-logging,file-logging,local
+WARN  [2022-03-18 02:36:07] [] [Logger.warn():44                                            ] No MyBatis mapper was found in '[com.tmonet.kms.mgmt]' package. Please check your configuration.
+INFO  [2022-03-18 02:36:08] [] [TomcatWebServer.initialize():108                            ] Tomcat initialized with port(s): 7000 (http)
+INFO  [2022-03-18 02:36:08] [] [DirectJDKLog.log():173                                      ] Initializing ProtocolHandler ["http-nio-7000"]
+INFO  [2022-03-18 02:36:08] [] [DirectJDKLog.log():173                                      ] Starting service [Tomcat]
+INFO  [2022-03-18 02:36:08] [] [DirectJDKLog.log():173                                      ] Starting Servlet engine: [Apache Tomcat/9.0.39]
+INFO  [2022-03-18 02:36:08] [] [DirectJDKLog.log():173                                      ] Initializing Spring embedded WebApplicationContext
+INFO  [2022-03-18 02:36:08] [] [ServletWebServerApplicationContext.prepareWebApplicationContext():285] Root WebApplicationContext: initialization completed in 2013 ms
+INFO  [2022-03-18 02:36:09] [] [ExecutorConfigurationSupport.initialize():181               ] Initializing ExecutorService 'applicationTaskExecutor'
+INFO  [2022-03-18 02:36:09] [] [DirectJDKLog.log():173                                      ] Starting ProtocolHandler ["http-nio-7000"]
+INFO  [2022-03-18 02:36:10] [] [TomcatWebServer.start():220                                 ] Tomcat started on port(s): 7000 (http) with context path ''
+INFO  [2022-03-18 02:36:10] [] [StartupInfoLogger.logStarted():61                           ] Started ManagementServerApplication in 3.782 seconds (JVM running for 5.295)
+INFO  [2022-03-18 02:36:10] [] [ManagementServerApplication.main():24                       ] ##### START MANAGEMENT SERVER #####
+INFO  [2022-03-18 02:36:14] [] [DirectJDKLog.log():173                                      ] Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  [2022-03-18 02:36:14] [] [FrameworkServlet.initServletBean():525                      ] Initializing Servlet 'dispatcherServlet'
+INFO  [2022-03-18 02:36:14] [] [FrameworkServlet.initServletBean():547                      ] Completed initialization in 7 ms
+INFO  [2022-03-18 02:36:15] [] [GetAttributeController.selectKeyProfile():58                ] GetAttributeRequest : [
+	apiInfo=null
+	operation=[
+
+	type=Enumeration
+	value=GetAttribute
+]
+	requestPayload=[
+
+	uniqueIdentifier=[
+
+	type=TextString
+	value=4E549B3CA59A588B41268F26BA5F75C3422CAC1813C4BCB3086BC8FDBCE82BD0
+]
+]
+]
+INFO  [2022-03-18 02:36:15] [] [HikariDataSource.getConnection():110                        ] HikariPool-1 - Starting...
+INFO  [2022-03-18 02:36:15] [] [HikariDataSource.getConnection():123                        ] HikariPool-1 - Start completed.
+INFO  [2022-03-18 02:36:15] [] [GetAttributeController.selectKeyProfile():62                ] keyList Profile ID : PRF07001
+INFO  [2022-03-18 02:36:15] [] [BaseLogging.serviceBaseLogging():77                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 02:36:15] [] [BaseLogging.serviceBaseLogging():78                         ] - Start Service: SelectKeyProfileService.selectKeyProfileInfo
+INFO  [2022-03-18 02:36:15] [] [BaseLogging.serviceBaseLogging():84                         ] - Result Data  : [com.tmonet.kms.mgmt.keyprofile.vo.KeyProfileInfoVo@11c3135b]
+INFO  [2022-03-18 02:36:15] [] [BaseLogging.serviceBaseLogging():85                         ] - End Service  : SelectKeyProfileService.selectKeyProfileInfo
+INFO  [2022-03-18 02:36:15] [] [BaseLogging.serviceBaseLogging():86                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 02:36:15] [] [BaseLogging.serviceBaseLogging():77                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 02:36:15] [] [BaseLogging.serviceBaseLogging():78                         ] - Start Service: SelectKeyProfileService.selectAllKeyProfileAttrList
+INFO  [2022-03-18 02:36:15] [] [BaseLogging.serviceBaseLogging():84                         ] - Result Data  : [com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@1d7ddaaa, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@142d4b95, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@4eeaada2, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@15240e4d, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@667f3ec9]
+INFO  [2022-03-18 02:36:15] [] [BaseLogging.serviceBaseLogging():85                         ] - End Service  : SelectKeyProfileService.selectAllKeyProfileAttrList
+INFO  [2022-03-18 02:36:15] [] [BaseLogging.serviceBaseLogging():86                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 02:36:15] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : canExportKey 1
+INFO  [2022-03-18 02:36:15] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : extractable
+INFO  [2022-03-18 02:36:15] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : cryptographicAlgorithm AES
+INFO  [2022-03-18 02:36:15] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : cryptographicAlgorithm
+INFO  [2022-03-18 02:36:15] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : keyLength 256
+INFO  [2022-03-18 02:36:15] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : cryptographicLength
+INFO  [2022-03-18 02:36:15] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : keyObjectType TP.KEY.03
+INFO  [2022-03-18 02:36:15] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : objectType
+INFO  [2022-03-18 02:36:15] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : keyUsageMask 0000001F
+INFO  [2022-03-18 02:36:15] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : cryptographicUsageMask
+INFO  [2022-03-18 02:40:33] [] [Version.<clinit>():21                                       ] HV000001: Hibernate Validator 6.1.6.Final
+INFO  [2022-03-18 02:40:33] [] [StartupInfoLogger.logStarting():55                          ] Starting ManagementServerApplication on ubuntu with PID 44766 (/home/recital93/Desktop/STS4Prj2/KMS_MGMT_SERVER/KMS_MGMT_SERVER/bin/main started by recital93 in /home/recital93/Desktop/STS4Prj2/KMS_MGMT_SERVER/KMS_MGMT_SERVER)
+INFO  [2022-03-18 02:40:33] [] [SpringApplication.logStartupProfileInfo():655               ] The following profiles are active: console-logging,file-logging,local
+WARN  [2022-03-18 02:40:34] [] [Logger.warn():44                                            ] No MyBatis mapper was found in '[com.tmonet.kms.mgmt]' package. Please check your configuration.
+INFO  [2022-03-18 02:40:35] [] [TomcatWebServer.initialize():108                            ] Tomcat initialized with port(s): 7000 (http)
+INFO  [2022-03-18 02:40:35] [] [DirectJDKLog.log():173                                      ] Initializing ProtocolHandler ["http-nio-7000"]
+INFO  [2022-03-18 02:40:35] [] [DirectJDKLog.log():173                                      ] Starting service [Tomcat]
+INFO  [2022-03-18 02:40:35] [] [DirectJDKLog.log():173                                      ] Starting Servlet engine: [Apache Tomcat/9.0.39]
+INFO  [2022-03-18 02:40:35] [] [DirectJDKLog.log():173                                      ] Initializing Spring embedded WebApplicationContext
+INFO  [2022-03-18 02:40:35] [] [ServletWebServerApplicationContext.prepareWebApplicationContext():285] Root WebApplicationContext: initialization completed in 1919 ms
+INFO  [2022-03-18 02:40:36] [] [ExecutorConfigurationSupport.initialize():181               ] Initializing ExecutorService 'applicationTaskExecutor'
+INFO  [2022-03-18 02:40:36] [] [DirectJDKLog.log():173                                      ] Starting ProtocolHandler ["http-nio-7000"]
+INFO  [2022-03-18 02:40:36] [] [TomcatWebServer.start():220                                 ] Tomcat started on port(s): 7000 (http) with context path ''
+INFO  [2022-03-18 02:40:36] [] [StartupInfoLogger.logStarted():61                           ] Started ManagementServerApplication in 3.617 seconds (JVM running for 4.541)
+INFO  [2022-03-18 02:40:36] [] [ManagementServerApplication.main():24                       ] ##### START MANAGEMENT SERVER #####
+INFO  [2022-03-18 02:40:43] [] [DirectJDKLog.log():173                                      ] Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  [2022-03-18 02:40:43] [] [FrameworkServlet.initServletBean():525                      ] Initializing Servlet 'dispatcherServlet'
+INFO  [2022-03-18 02:40:43] [] [FrameworkServlet.initServletBean():547                      ] Completed initialization in 7 ms
+INFO  [2022-03-18 02:40:43] [] [GetAttributeController.selectKeyProfile():58                ] GetAttributeRequest : [
+	apiInfo=null
+	operation=[
+
+	type=Enumeration
+	value=GetAttribute
+]
+	requestPayload=[
+
+	uniqueIdentifier=[
+
+	type=TextString
+	value=4E549B3CA59A588B41268F26BA5F75C3422CAC1813C4BCB3086BC8FDBCE82BD0
+]
+]
+]
+INFO  [2022-03-18 02:40:43] [] [HikariDataSource.getConnection():110                        ] HikariPool-1 - Starting...
+INFO  [2022-03-18 02:40:43] [] [HikariDataSource.getConnection():123                        ] HikariPool-1 - Start completed.
+INFO  [2022-03-18 02:40:43] [] [GetAttributeController.selectKeyProfile():62                ] keyList Profile ID : PRF07001
+INFO  [2022-03-18 02:40:43] [] [BaseLogging.serviceBaseLogging():77                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 02:40:43] [] [BaseLogging.serviceBaseLogging():78                         ] - Start Service: SelectKeyProfileService.selectKeyProfileInfo
+INFO  [2022-03-18 02:40:43] [] [BaseLogging.serviceBaseLogging():84                         ] - Result Data  : [com.tmonet.kms.mgmt.keyprofile.vo.KeyProfileInfoVo@5464800c]
+INFO  [2022-03-18 02:40:43] [] [BaseLogging.serviceBaseLogging():85                         ] - End Service  : SelectKeyProfileService.selectKeyProfileInfo
+INFO  [2022-03-18 02:40:43] [] [BaseLogging.serviceBaseLogging():86                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 02:40:43] [] [BaseLogging.serviceBaseLogging():77                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 02:40:43] [] [BaseLogging.serviceBaseLogging():78                         ] - Start Service: SelectKeyProfileService.selectAllKeyProfileAttrList
+INFO  [2022-03-18 02:40:43] [] [BaseLogging.serviceBaseLogging():84                         ] - Result Data  : [com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@3315644b, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@4301e6c5, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@6fc5dcd6, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@12e2f564, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@a4dfc4f]
+INFO  [2022-03-18 02:40:43] [] [BaseLogging.serviceBaseLogging():85                         ] - End Service  : SelectKeyProfileService.selectAllKeyProfileAttrList
+INFO  [2022-03-18 02:40:43] [] [BaseLogging.serviceBaseLogging():86                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 02:40:43] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : canExportKey 1
+INFO  [2022-03-18 02:40:43] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : Extractable
+INFO  [2022-03-18 02:40:43] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : cryptographicAlgorithm AES
+INFO  [2022-03-18 02:40:43] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : CryptographicAlgorithm
+INFO  [2022-03-18 02:40:43] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : keyLength 256
+INFO  [2022-03-18 02:40:43] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : CryptographicLength
+INFO  [2022-03-18 02:40:43] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : keyObjectType TP.KEY.03
+INFO  [2022-03-18 02:40:43] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : ObjectType
+INFO  [2022-03-18 02:40:43] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : keyUsageMask 0000001F
+INFO  [2022-03-18 02:40:43] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : CryptographicUsageMask
+INFO  [2022-03-18 02:43:24] [] [Version.<clinit>():21                                       ] HV000001: Hibernate Validator 6.1.6.Final
+INFO  [2022-03-18 02:43:24] [] [StartupInfoLogger.logStarting():55                          ] Starting ManagementServerApplication on ubuntu with PID 45090 (/home/recital93/Desktop/STS4Prj2/KMS_MGMT_SERVER/KMS_MGMT_SERVER/bin/main started by recital93 in /home/recital93/Desktop/STS4Prj2/KMS_MGMT_SERVER/KMS_MGMT_SERVER)
+INFO  [2022-03-18 02:43:24] [] [SpringApplication.logStartupProfileInfo():655               ] The following profiles are active: console-logging,file-logging,local
+WARN  [2022-03-18 02:43:26] [] [Logger.warn():44                                            ] No MyBatis mapper was found in '[com.tmonet.kms.mgmt]' package. Please check your configuration.
+INFO  [2022-03-18 02:43:26] [] [TomcatWebServer.initialize():108                            ] Tomcat initialized with port(s): 7000 (http)
+INFO  [2022-03-18 02:43:26] [] [DirectJDKLog.log():173                                      ] Initializing ProtocolHandler ["http-nio-7000"]
+INFO  [2022-03-18 02:43:26] [] [DirectJDKLog.log():173                                      ] Starting service [Tomcat]
+INFO  [2022-03-18 02:43:26] [] [DirectJDKLog.log():173                                      ] Starting Servlet engine: [Apache Tomcat/9.0.39]
+INFO  [2022-03-18 02:43:26] [] [DirectJDKLog.log():173                                      ] Initializing Spring embedded WebApplicationContext
+INFO  [2022-03-18 02:43:26] [] [ServletWebServerApplicationContext.prepareWebApplicationContext():285] Root WebApplicationContext: initialization completed in 1845 ms
+INFO  [2022-03-18 02:43:27] [] [ExecutorConfigurationSupport.initialize():181               ] Initializing ExecutorService 'applicationTaskExecutor'
+INFO  [2022-03-18 02:43:27] [] [DirectJDKLog.log():173                                      ] Starting ProtocolHandler ["http-nio-7000"]
+INFO  [2022-03-18 02:43:27] [] [TomcatWebServer.start():220                                 ] Tomcat started on port(s): 7000 (http) with context path ''
+INFO  [2022-03-18 02:43:27] [] [StartupInfoLogger.logStarted():61                           ] Started ManagementServerApplication in 3.695 seconds (JVM running for 4.76)
+INFO  [2022-03-18 02:43:27] [] [ManagementServerApplication.main():24                       ] ##### START MANAGEMENT SERVER #####
+INFO  [2022-03-18 02:43:34] [] [DirectJDKLog.log():173                                      ] Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  [2022-03-18 02:43:34] [] [FrameworkServlet.initServletBean():525                      ] Initializing Servlet 'dispatcherServlet'
+INFO  [2022-03-18 02:43:34] [] [FrameworkServlet.initServletBean():547                      ] Completed initialization in 9 ms
+INFO  [2022-03-18 02:43:34] [] [GetAttributeController.selectKeyProfile():58                ] GetAttributeRequest : [
+	apiInfo=null
+	operation=[
+
+	type=Enumeration
+	value=GetAttribute
+]
+	requestPayload=[
+
+	uniqueIdentifier=[
+
+	type=TextString
+	value=4E549B3CA59A588B41268F26BA5F75C3422CAC1813C4BCB3086BC8FDBCE82BD0
+]
+]
+]
+INFO  [2022-03-18 02:43:34] [] [HikariDataSource.getConnection():110                        ] HikariPool-1 - Starting...
+INFO  [2022-03-18 02:43:34] [] [HikariDataSource.getConnection():123                        ] HikariPool-1 - Start completed.
+INFO  [2022-03-18 02:43:34] [] [GetAttributeController.selectKeyProfile():62                ] keyList Profile ID : PRF07001
+INFO  [2022-03-18 02:43:34] [] [BaseLogging.serviceBaseLogging():77                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 02:43:34] [] [BaseLogging.serviceBaseLogging():78                         ] - Start Service: SelectKeyProfileService.selectKeyProfileInfo
+INFO  [2022-03-18 02:43:34] [] [BaseLogging.serviceBaseLogging():84                         ] - Result Data  : [com.tmonet.kms.mgmt.keyprofile.vo.KeyProfileInfoVo@17f8aaf5]
+INFO  [2022-03-18 02:43:34] [] [BaseLogging.serviceBaseLogging():85                         ] - End Service  : SelectKeyProfileService.selectKeyProfileInfo
+INFO  [2022-03-18 02:43:34] [] [BaseLogging.serviceBaseLogging():86                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 02:43:34] [] [BaseLogging.serviceBaseLogging():77                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 02:43:34] [] [BaseLogging.serviceBaseLogging():78                         ] - Start Service: SelectKeyProfileService.selectAllKeyProfileAttrList
+INFO  [2022-03-18 02:43:34] [] [BaseLogging.serviceBaseLogging():84                         ] - Result Data  : [com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@5b3bd650, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@94660c0, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@20628cf3, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@29ea0e3b, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@2c66c400]
+INFO  [2022-03-18 02:43:34] [] [BaseLogging.serviceBaseLogging():85                         ] - End Service  : SelectKeyProfileService.selectAllKeyProfileAttrList
+INFO  [2022-03-18 02:43:34] [] [BaseLogging.serviceBaseLogging():86                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 02:43:34] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : canExportKey 1
+INFO  [2022-03-18 02:43:34] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : Extractable
+INFO  [2022-03-18 02:43:34] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : cryptographicAlgorithm AES
+INFO  [2022-03-18 02:43:34] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : CryptographicAlgorithm
+INFO  [2022-03-18 02:43:34] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : keyLength 256
+INFO  [2022-03-18 02:43:34] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : CryptographicLength
+INFO  [2022-03-18 02:43:34] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : keyObjectType TP.KEY.03
+INFO  [2022-03-18 02:43:34] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : ObjectType
+INFO  [2022-03-18 02:43:34] [] [GetAttributeController.selectKeyProfile():125               ] keyAttribute : keyUsageMask 0000001F
+INFO  [2022-03-18 02:43:34] [] [GetAttributeController.selectKeyProfile():128               ] KMIPAttName : CryptographicUsageMask
+INFO  [2022-03-18 02:43:46] [] [RegisterObjectController.RegisterSymmetricKey():61          ] register requestBody : {
+    "Operation" : {"type" : "Enumeration", "value" : "Register"},
+    "RequestPayload" : {
+        "ObjectType" : {"type" : "Enumeration", "value" : "SymmetricKey"},
+        "Attributes" : {
+            "CryptographicUsageMask" : {"type" : "Integer", "value" : "Encrypt Decrypt DeriveKey"},
+            "CryptographicAlgorithm" : {"type" : "Enumeration", "value" : "AES"},
+            "CryptographicLength" : {"type" : "Integer", "value" : "256"},
+            "ActivationDate" : {"type" : "DateTime", "value" : "2022.03.10.10.45-3600"}
+        },
+        "SymmetricKey" : {
+            "KeyBlock" : {
+                "KeyFormatType" : {"type" : "Enumeration", "value" : "Raw"},
+                "KeyValue" : {
+                    "KeyMaterial" : {"type" : "ByteString", "value": "7352CB3D949BD6F285E0AB10D020EA6E7352CB3D949BD6F2"}
+                },
+                "CryptographicAlgorithm" : {"type" : "Enumeration", "value" : "AES"},
+                "CryptographicLength" : {"type" : "Integer", "value" : 256}
+            }
+        }
+    }
+}
+INFO  [2022-03-18 02:43:46] [] [RegisterObjectController.RegisterSymmetricKey():62          ] register requestParam : SymmetricKey
+INFO  [2022-03-18 02:43:46] [] [RegisterObjectController.RegisterSymmetricKey():108         ] objectType : SymmetricKey
+INFO  [2022-03-18 02:43:46] [] [RegisterObjectController.RegisterSymmetricKey():109         ] usageMask : Encrypt Decrypt DeriveKey
+INFO  [2022-03-18 02:43:46] [] [RegisterObjectController.RegisterSymmetricKey():110         ] algorithm : AES
+INFO  [2022-03-18 02:43:46] [] [RegisterObjectController.RegisterSymmetricKey():111         ] keyLength : 256
+INFO  [2022-03-18 02:43:46] [] [RegisterObjectController.RegisterSymmetricKey():112         ] activateDate : 2022.03.10.10.45-3600
+INFO  [2022-03-18 02:43:46] [] [RegisterObjectController.RegisterSymmetricKey():113         ] keyValue : 7352CB3D949BD6F285E0AB10D020EA6E7352CB3D949BD6F2
+INFO  [2022-03-18 02:43:46] [] [RegisterObjectController.RegisterSymmetricKey():114         ] extractable : 
+INFO  [2022-03-18 02:43:46] [] [RegisterObjectController.RegisterSymmetricKey():115         ] usageMask bit OR : cc
+INFO  [2022-03-18 02:43:46] [] [RegisterObjectController.RegisterSymmetricKey():116         ] canExportKey : 1
+INFO  [2022-03-18 02:43:46] [] [BaseLogging.serviceBaseLogging():77                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 02:43:46] [] [BaseLogging.serviceBaseLogging():78                         ] - Start Service: RegisterKeyProfileService.checkParams
+INFO  [2022-03-18 02:43:46] [] [BaseLogging.serviceBaseLogging():84                         ] - Result Data  : null
+INFO  [2022-03-18 02:43:46] [] [BaseLogging.serviceBaseLogging():85                         ] - End Service  : RegisterKeyProfileService.checkParams
+INFO  [2022-03-18 02:43:46] [] [BaseLogging.serviceBaseLogging():86                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 02:43:46] [] [BaseLogging.serviceBaseLogging():77                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 02:43:46] [] [BaseLogging.serviceBaseLogging():78                         ] - Start Service: RegisterKeyProfileService.registerKeyprofileInfo
+INFO  [2022-03-18 02:43:46] [] [BaseLogging.serviceBaseLogging():84                         ] - Result Data  : PRF08003
+INFO  [2022-03-18 02:43:46] [] [BaseLogging.serviceBaseLogging():85                         ] - End Service  : RegisterKeyProfileService.registerKeyprofileInfo
+INFO  [2022-03-18 02:43:46] [] [BaseLogging.serviceBaseLogging():86                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 02:43:46] [] [RegisterObjectController.registerKeyProfileFunc():197       ] serviceId : 8D550C3D61508DF90461D08CAEC9328BADB0D12FD2372CB215F1EC0E3A0FB227
+INFO  [2022-03-18 02:43:46] [] [RegisterObjectController.RegisterSymmetricKey():152         ] keyProfileId : PRF08003
+INFO  [2022-03-18 02:43:46] [] [RegisterObjectController.RegisterSymmetricKey():153         ] serviceId : 8D550C3D61508DF90461D08CAEC9328BADB0D12FD2372CB215F1EC0E3A0FB227
+INFO  [2022-03-18 02:43:46] [] [BaseLogging.serviceBaseLogging():77                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 02:43:46] [] [BaseLogging.serviceBaseLogging():78                         ] - Start Service: ImportSymmetricKeyService.checkKeyProfileStatus
+INFO  [2022-03-18 02:43:46] [] [BaseLogging.serviceBaseLogging():84                         ] - Result Data  : null
+INFO  [2022-03-18 02:43:46] [] [BaseLogging.serviceBaseLogging():85                         ] - End Service  : ImportSymmetricKeyService.checkKeyProfileStatus
+INFO  [2022-03-18 02:43:46] [] [BaseLogging.serviceBaseLogging():86                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 02:43:46] [] [BaseLogging.serviceBaseLogging():77                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 02:43:46] [] [BaseLogging.serviceBaseLogging():78                         ] - Start Service: ImportSymmetricKeyService.getHsmServiceInfo
+INFO  [2022-03-18 02:43:46] [] [BaseLogging.serviceBaseLogging():84                         ] - Result Data  : com.tmonet.kms.mgmt.common.vo.HsmServiceInfoVo@5fac95c3
+INFO  [2022-03-18 02:43:46] [] [BaseLogging.serviceBaseLogging():85                         ] - End Service  : ImportSymmetricKeyService.getHsmServiceInfo
+INFO  [2022-03-18 02:43:46] [] [BaseLogging.serviceBaseLogging():86                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 02:43:46] [] [BaseLogging.serviceBaseLogging():77                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 02:43:46] [] [BaseLogging.serviceBaseLogging():78                         ] - Start Service: ImportSymmetricKeyService.selectKeyProfileAttrList
+INFO  [2022-03-18 02:43:46] [] [BaseLogging.serviceBaseLogging():84                         ] - Result Data  : [com.tmonet.kms.mgmt.key.vo.KeyProfileAttrListVo@56991ae9, com.tmonet.kms.mgmt.key.vo.KeyProfileAttrListVo@2eb15c1a, com.tmonet.kms.mgmt.key.vo.KeyProfileAttrListVo@40ef0474, com.tmonet.kms.mgmt.key.vo.KeyProfileAttrListVo@7bd68327, com.tmonet.kms.mgmt.key.vo.KeyProfileAttrListVo@658690e6]
+INFO  [2022-03-18 02:43:46] [] [BaseLogging.serviceBaseLogging():85                         ] - End Service  : ImportSymmetricKeyService.selectKeyProfileAttrList
+INFO  [2022-03-18 02:43:46] [] [BaseLogging.serviceBaseLogging():86                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 02:43:46] [] [BaseLogging.serviceBaseLogging():77                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 02:43:46] [] [BaseLogging.serviceBaseLogging():78                         ] - Start Service: ImportSymmetricKeyService.makeHsmImportSymmetricKeyRequestData
+INFO  [2022-03-18 02:43:46] [] [BaseLogging.serviceBaseLogging():84                         ] - Result Data  : [
+	apiInfo={
+		apiId=HSM.SK.REG.02, 
+		apiVersion=1.0.0
+	}
+	partitionId=authrium01, 
+	cryptographicAlgorithm=AES, 
+	symmetricKeyData=7352CB3D949BD6F285E0AB10D020EA6E7352CB3D949BD6F2, 
+	keyEncryptionKeyId=null, 
+	cryptographicParameter=null
+]
+INFO  [2022-03-18 02:43:46] [] [BaseLogging.serviceBaseLogging():85                         ] - End Service  : ImportSymmetricKeyService.makeHsmImportSymmetricKeyRequestData
+INFO  [2022-03-18 02:43:46] [] [BaseLogging.serviceBaseLogging():86                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 02:43:48] [] [BaseLogging.serviceBaseLogging():77                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 02:43:48] [] [BaseLogging.serviceBaseLogging():78                         ] - Start Service: ImportSymmetricKeyService.setKeyProfileAttrListToKeyAttrList
+INFO  [2022-03-18 02:43:48] [] [BaseLogging.serviceBaseLogging():84                         ] - Result Data  : [com.tmonet.kms.mgmt.common.vo.KeyAttrListVo@1e5c4b09, com.tmonet.kms.mgmt.common.vo.KeyAttrListVo@492bcd74, com.tmonet.kms.mgmt.common.vo.KeyAttrListVo@8e58db8, com.tmonet.kms.mgmt.common.vo.KeyAttrListVo@4566195e, com.tmonet.kms.mgmt.common.vo.KeyAttrListVo@391e16f8]
+INFO  [2022-03-18 02:43:48] [] [BaseLogging.serviceBaseLogging():85                         ] - End Service  : ImportSymmetricKeyService.setKeyProfileAttrListToKeyAttrList
+INFO  [2022-03-18 02:43:48] [] [BaseLogging.serviceBaseLogging():86                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 02:43:48] [] [BaseLogging.serviceBaseLogging():77                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 02:43:48] [] [BaseLogging.serviceBaseLogging():78                         ] - Start Service: ImportSymmetricKeyService.setKeyAttr
+INFO  [2022-03-18 02:43:48] [] [BaseLogging.serviceBaseLogging():84                         ] - Result Data  : null
+INFO  [2022-03-18 02:43:48] [] [BaseLogging.serviceBaseLogging():85                         ] - End Service  : ImportSymmetricKeyService.setKeyAttr
+INFO  [2022-03-18 02:43:48] [] [BaseLogging.serviceBaseLogging():86                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 02:43:48] [] [BaseLogging.serviceBaseLogging():77                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 02:43:48] [] [BaseLogging.serviceBaseLogging():78                         ] - Start Service: ImportSymmetricKeyService.storeSymmetricKeyInfo
+INFO  [2022-03-18 02:43:48] [] [BaseLogging.serviceBaseLogging():84                         ] - Result Data  : null
+INFO  [2022-03-18 02:43:48] [] [BaseLogging.serviceBaseLogging():85                         ] - End Service  : ImportSymmetricKeyService.storeSymmetricKeyInfo
+INFO  [2022-03-18 02:43:48] [] [BaseLogging.serviceBaseLogging():86                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 02:43:48] [] [RegisterObjectController.RegisterSymmetricKey():165         ] keyId : CAF97018A90DC16FA1EACB2C965B1651F5E088E46E764110A313C0122F51B5ED
+INFO  [2022-03-18 19:09:07] [] [Version.<clinit>():21                                       ] HV000001: Hibernate Validator 6.1.6.Final
+INFO  [2022-03-18 19:09:07] [] [StartupInfoLogger.logStarting():55                          ] Starting ManagementServerApplication on ubuntu with PID 6080 (/home/recital93/Desktop/STS4Prj2/KMS_MGMT_SERVER/KMS_MGMT_SERVER/bin/main started by recital93 in /home/recital93/Desktop/STS4Prj2/KMS_MGMT_SERVER/KMS_MGMT_SERVER)
+INFO  [2022-03-18 19:09:07] [] [SpringApplication.logStartupProfileInfo():655               ] The following profiles are active: console-logging,file-logging,local
+WARN  [2022-03-18 19:09:08] [] [Logger.warn():44                                            ] No MyBatis mapper was found in '[com.tmonet.kms.mgmt]' package. Please check your configuration.
+INFO  [2022-03-18 19:09:09] [] [TomcatWebServer.initialize():108                            ] Tomcat initialized with port(s): 7000 (http)
+INFO  [2022-03-18 19:09:09] [] [DirectJDKLog.log():173                                      ] Initializing ProtocolHandler ["http-nio-7000"]
+INFO  [2022-03-18 19:09:09] [] [DirectJDKLog.log():173                                      ] Starting service [Tomcat]
+INFO  [2022-03-18 19:09:09] [] [DirectJDKLog.log():173                                      ] Starting Servlet engine: [Apache Tomcat/9.0.39]
+INFO  [2022-03-18 19:09:09] [] [DirectJDKLog.log():173                                      ] Initializing Spring embedded WebApplicationContext
+INFO  [2022-03-18 19:09:09] [] [ServletWebServerApplicationContext.prepareWebApplicationContext():285] Root WebApplicationContext: initialization completed in 1838 ms
+INFO  [2022-03-18 19:09:10] [] [ExecutorConfigurationSupport.initialize():181               ] Initializing ExecutorService 'applicationTaskExecutor'
+INFO  [2022-03-18 19:09:10] [] [DirectJDKLog.log():173                                      ] Starting ProtocolHandler ["http-nio-7000"]
+INFO  [2022-03-18 19:09:10] [] [TomcatWebServer.start():220                                 ] Tomcat started on port(s): 7000 (http) with context path ''
+INFO  [2022-03-18 19:09:10] [] [StartupInfoLogger.logStarted():61                           ] Started ManagementServerApplication in 3.99 seconds (JVM running for 5.114)
+INFO  [2022-03-18 19:09:10] [] [ManagementServerApplication.main():24                       ] ##### START MANAGEMENT SERVER #####
+INFO  [2022-03-18 19:09:44] [] [DirectJDKLog.log():173                                      ] Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  [2022-03-18 19:09:44] [] [FrameworkServlet.initServletBean():525                      ] Initializing Servlet 'dispatcherServlet'
+INFO  [2022-03-18 19:09:44] [] [FrameworkServlet.initServletBean():547                      ] Completed initialization in 8 ms
+INFO  [2022-03-18 19:09:44] [] [GetAttributeController.selectKeyProfile():58                ] GetAttributeRequest : [
+	apiInfo=null
+	operation=[
+
+	type=Enumeration
+	value=GetAttribute
+]
+	requestPayload=[
+
+	uniqueIdentifier=[
+
+	type=TextString
+	value=4E549B3CA59A588B41268F26BA5F75C3422CAC1813C4BCB3086BC8FDBCE82BD0
+]
+]
+]
+INFO  [2022-03-18 19:09:44] [] [HikariDataSource.getConnection():110                        ] HikariPool-1 - Starting...
+INFO  [2022-03-18 19:09:44] [] [HikariDataSource.getConnection():123                        ] HikariPool-1 - Start completed.
+INFO  [2022-03-18 19:09:44] [] [GetAttributeController.selectKeyProfile():62                ] keyList Profile ID : PRF07001
+INFO  [2022-03-18 19:09:44] [] [BaseLogging.serviceBaseLogging():77                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 19:09:44] [] [BaseLogging.serviceBaseLogging():78                         ] - Start Service: SelectKeyProfileService.selectKeyProfileInfo
+INFO  [2022-03-18 19:09:44] [] [BaseLogging.serviceBaseLogging():84                         ] - Result Data  : [com.tmonet.kms.mgmt.keyprofile.vo.KeyProfileInfoVo@7bc095ac]
+INFO  [2022-03-18 19:09:44] [] [BaseLogging.serviceBaseLogging():85                         ] - End Service  : SelectKeyProfileService.selectKeyProfileInfo
+INFO  [2022-03-18 19:09:44] [] [BaseLogging.serviceBaseLogging():86                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 19:09:44] [] [BaseLogging.serviceBaseLogging():77                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 19:09:44] [] [BaseLogging.serviceBaseLogging():78                         ] - Start Service: SelectKeyProfileService.selectAllKeyProfileAttrList
+INFO  [2022-03-18 19:09:44] [] [BaseLogging.serviceBaseLogging():84                         ] - Result Data  : [com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@1acb9a8a, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@65d9018a, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@49f7bb7, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@2e7283f1, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@682b537f]
+INFO  [2022-03-18 19:09:44] [] [BaseLogging.serviceBaseLogging():85                         ] - End Service  : SelectKeyProfileService.selectAllKeyProfileAttrList
+INFO  [2022-03-18 19:09:44] [] [BaseLogging.serviceBaseLogging():86                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 19:09:44] [] [GetAttributeController.selectKeyProfile():126               ] keyAttribute : canExportKey 1
+INFO  [2022-03-18 19:09:44] [] [GetAttributeController.selectKeyProfile():129               ] KMIPAttName : Extractable
+INFO  [2022-03-18 19:09:44] [] [GetAttributeController.selectKeyProfile():126               ] keyAttribute : cryptographicAlgorithm AES
+INFO  [2022-03-18 19:09:44] [] [GetAttributeController.selectKeyProfile():129               ] KMIPAttName : CryptographicAlgorithm
+INFO  [2022-03-18 19:09:44] [] [GetAttributeController.selectKeyProfile():126               ] keyAttribute : keyLength 256
+INFO  [2022-03-18 19:09:44] [] [GetAttributeController.selectKeyProfile():129               ] KMIPAttName : CryptographicLength
+INFO  [2022-03-18 19:09:44] [] [GetAttributeController.selectKeyProfile():126               ] keyAttribute : keyObjectType TP.KEY.03
+INFO  [2022-03-18 19:09:44] [] [GetAttributeController.selectKeyProfile():129               ] KMIPAttName : ObjectType
+INFO  [2022-03-18 19:09:44] [] [GetAttributeController.selectKeyProfile():126               ] keyAttribute : keyUsageMask cc
+INFO  [2022-03-18 19:09:44] [] [GetAttributeController.selectKeyProfile():129               ] KMIPAttName : CryptographicUsageMask
+INFO  [2022-03-18 23:42:27] [] [Version.<clinit>():21                                       ] HV000001: Hibernate Validator 6.1.6.Final
+INFO  [2022-03-18 23:42:27] [] [StartupInfoLogger.logStarting():55                          ] Starting ManagementServerApplication on ubuntu with PID 13360 (/home/recital93/Desktop/STS4Prj2/KMS_MGMT_SERVER/KMS_MGMT_SERVER/bin/main started by recital93 in /home/recital93/Desktop/STS4Prj2/KMS_MGMT_SERVER/KMS_MGMT_SERVER)
+INFO  [2022-03-18 23:42:27] [] [SpringApplication.logStartupProfileInfo():655               ] The following profiles are active: console-logging,file-logging,local
+WARN  [2022-03-18 23:42:29] [] [Logger.warn():44                                            ] No MyBatis mapper was found in '[com.tmonet.kms.mgmt]' package. Please check your configuration.
+INFO  [2022-03-18 23:42:30] [] [TomcatWebServer.initialize():108                            ] Tomcat initialized with port(s): 7000 (http)
+INFO  [2022-03-18 23:42:30] [] [DirectJDKLog.log():173                                      ] Initializing ProtocolHandler ["http-nio-7000"]
+INFO  [2022-03-18 23:42:30] [] [DirectJDKLog.log():173                                      ] Starting service [Tomcat]
+INFO  [2022-03-18 23:42:30] [] [DirectJDKLog.log():173                                      ] Starting Servlet engine: [Apache Tomcat/9.0.39]
+INFO  [2022-03-18 23:42:30] [] [DirectJDKLog.log():173                                      ] Initializing Spring embedded WebApplicationContext
+INFO  [2022-03-18 23:42:30] [] [ServletWebServerApplicationContext.prepareWebApplicationContext():285] Root WebApplicationContext: initialization completed in 2085 ms
+INFO  [2022-03-18 23:42:31] [] [ExecutorConfigurationSupport.initialize():181               ] Initializing ExecutorService 'applicationTaskExecutor'
+INFO  [2022-03-18 23:42:31] [] [DirectJDKLog.log():173                                      ] Starting ProtocolHandler ["http-nio-7000"]
+INFO  [2022-03-18 23:42:31] [] [TomcatWebServer.start():220                                 ] Tomcat started on port(s): 7000 (http) with context path ''
+INFO  [2022-03-18 23:42:31] [] [StartupInfoLogger.logStarted():61                           ] Started ManagementServerApplication in 4.449 seconds (JVM running for 6.252)
+INFO  [2022-03-18 23:42:31] [] [ManagementServerApplication.main():24                       ] ##### START MANAGEMENT SERVER #####
+INFO  [2022-03-18 23:42:57] [] [DirectJDKLog.log():173                                      ] Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  [2022-03-18 23:42:57] [] [FrameworkServlet.initServletBean():525                      ] Initializing Servlet 'dispatcherServlet'
+INFO  [2022-03-18 23:42:57] [] [FrameworkServlet.initServletBean():547                      ] Completed initialization in 8 ms
+INFO  [2022-03-18 23:42:57] [] [GetAttributeController.selectKeyProfile():58                ] GetAttributeRequest : [
+	apiInfo=null
+	operation=[
+
+	type=Enumeration
+	value=GetAttribute
+]
+	requestPayload=[
+
+	uniqueIdentifier=[
+
+	type=TextString
+	value=91D7FB5B35B64D3759757739A5272CD8CAB04EB79C853B43ABD8D68D91DAC16B
+]
+]
+]
+INFO  [2022-03-18 23:42:57] [] [HikariDataSource.getConnection():110                        ] HikariPool-1 - Starting...
+INFO  [2022-03-18 23:42:57] [] [HikariDataSource.getConnection():123                        ] HikariPool-1 - Start completed.
+WARN  [2022-03-18 23:42:57] [] [ExceptionHandlerExceptionResolver.doResolveHandlerMethodException():414] Failure in @ExceptionHandler com.tmonet.kms.mgmt.common.exception.ControllerExceptionHandler#handleKMSException(KMSException, HttpServletRequest)
+java.lang.NullPointerException: null
+	at com.tmonet.kms.mgmt.common.model.BaseResponse.<init>(BaseResponse.java:23)
+	at com.tmonet.kms.mgmt.common.model.ExceptionResponse.<init>(ExceptionResponse.java:38)
+	at com.tmonet.kms.mgmt.common.exception.ControllerExceptionHandler.handleKMSException(ControllerExceptionHandler.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:407)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:61)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:141)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:80)
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1300)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1111)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+ERROR [2022-03-18 23:42:57] [] [DirectJDKLog.log():175                                      ] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.tmonet.kms.mgmt.common.exception.KMSException: Database select failure] with root cause
+com.tmonet.kms.mgmt.common.exception.KMSException: Database select failure
+	at com.tmonet.kms.mgmt.kmsp.getAttribute.GetAttributeService.selectKeyList(GetAttributeService.java:43)
+	at com.tmonet.kms.mgmt.kmsp.getAttribute.GetAttributeController.selectKeyProfile(GetAttributeController.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+INFO  [2022-03-18 23:43:40] [] [GetAttributeController.selectKeyProfile():58                ] GetAttributeRequest : [
+	apiInfo=null
+	operation=[
+
+	type=Enumeration
+	value=GetAttribute
+]
+	requestPayload=[
+
+	uniqueIdentifier=[
+
+	type=TextString
+	value=4E549B3CA59A588B41268F26BA5F75C3422CAC1813C4BCB3086BC8FDBCE82BD0
+]
+]
+]
+INFO  [2022-03-18 23:43:40] [] [GetAttributeController.selectKeyProfile():62                ] keyList Profile ID : PRF07001
+INFO  [2022-03-18 23:43:40] [] [BaseLogging.serviceBaseLogging():77                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 23:43:40] [] [BaseLogging.serviceBaseLogging():78                         ] - Start Service: SelectKeyProfileService.selectKeyProfileInfo
+INFO  [2022-03-18 23:43:40] [] [BaseLogging.serviceBaseLogging():84                         ] - Result Data  : [com.tmonet.kms.mgmt.keyprofile.vo.KeyProfileInfoVo@292fbf27]
+INFO  [2022-03-18 23:43:40] [] [BaseLogging.serviceBaseLogging():85                         ] - End Service  : SelectKeyProfileService.selectKeyProfileInfo
+INFO  [2022-03-18 23:43:40] [] [BaseLogging.serviceBaseLogging():86                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 23:43:40] [] [BaseLogging.serviceBaseLogging():77                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 23:43:40] [] [BaseLogging.serviceBaseLogging():78                         ] - Start Service: SelectKeyProfileService.selectAllKeyProfileAttrList
+INFO  [2022-03-18 23:43:40] [] [BaseLogging.serviceBaseLogging():84                         ] - Result Data  : [com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@621c6fd5, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@361e2236, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@4195c60f, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@5eedb311, com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute@5f8e1dde]
+INFO  [2022-03-18 23:43:40] [] [BaseLogging.serviceBaseLogging():85                         ] - End Service  : SelectKeyProfileService.selectAllKeyProfileAttrList
+INFO  [2022-03-18 23:43:40] [] [BaseLogging.serviceBaseLogging():86                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 23:43:40] [] [GetAttributeController.selectKeyProfile():126               ] keyAttribute : canExportKey 1
+INFO  [2022-03-18 23:43:40] [] [GetAttributeController.selectKeyProfile():129               ] KMIPAttName : Extractable
+INFO  [2022-03-18 23:43:40] [] [GetAttributeController.selectKeyProfile():126               ] keyAttribute : cryptographicAlgorithm AES
+INFO  [2022-03-18 23:43:40] [] [GetAttributeController.selectKeyProfile():129               ] KMIPAttName : CryptographicAlgorithm
+INFO  [2022-03-18 23:43:40] [] [GetAttributeController.selectKeyProfile():126               ] keyAttribute : keyLength 256
+INFO  [2022-03-18 23:43:40] [] [GetAttributeController.selectKeyProfile():129               ] KMIPAttName : CryptographicLength
+INFO  [2022-03-18 23:43:40] [] [GetAttributeController.selectKeyProfile():126               ] keyAttribute : keyObjectType TP.KEY.03
+INFO  [2022-03-18 23:43:40] [] [GetAttributeController.selectKeyProfile():129               ] KMIPAttName : ObjectType
+INFO  [2022-03-18 23:43:40] [] [GetAttributeController.selectKeyProfile():126               ] keyAttribute : keyUsageMask cc
+INFO  [2022-03-18 23:43:40] [] [GetAttributeController.selectKeyProfile():129               ] KMIPAttName : CryptographicUsageMask
+INFO  [2022-03-18 23:44:02] [] [RegisterObjectController.RegisterSymmetricKey():61          ] register requestBody : {
+    "Operation" : {"type" : "Enumeration", "value" : "Register"},
+    "RequestPayload" : {
+        "ObjectType" : {"type" : "Enumeration", "value" : "SymmetricKey"},
+        "Attributes" : {
+            "CryptographicUsageMask" : {"type" : "Integer", "value" : "Encrypt Decrypt DeriveKey"},
+            "CryptographicAlgorithm" : {"type" : "Enumeration", "value" : "AES"},
+            "CryptographicLength" : {"type" : "Integer", "value" : "256"},
+            "ActivationDate" : {"type" : "DateTime", "value" : "2022.03.10.10.45-3600"}
+        },
+        "SymmetricKey" : {
+            "KeyBlock" : {
+                "KeyFormatType" : {"type" : "Enumeration", "value" : "Raw"},
+                "KeyValue" : {
+                    "KeyMaterial" : {"type" : "ByteString", "value": "7352CB3D949BD6F285E0AB10D020EA6E7352CB3D949BD6F2"}
+                },
+                "CryptographicAlgorithm" : {"type" : "Enumeration", "value" : "AES"},
+                "CryptographicLength" : {"type" : "Integer", "value" : 256}
+            }
+        }
+    }
+}
+INFO  [2022-03-18 23:44:02] [] [RegisterObjectController.RegisterSymmetricKey():62          ] register requestParam : SymmetricKey
+INFO  [2022-03-18 23:44:02] [] [RegisterObjectController.RegisterSymmetricKey():108         ] objectType : SymmetricKey
+INFO  [2022-03-18 23:44:02] [] [RegisterObjectController.RegisterSymmetricKey():109         ] usageMask : Encrypt Decrypt DeriveKey
+INFO  [2022-03-18 23:44:02] [] [RegisterObjectController.RegisterSymmetricKey():110         ] algorithm : AES
+INFO  [2022-03-18 23:44:02] [] [RegisterObjectController.RegisterSymmetricKey():111         ] keyLength : 256
+INFO  [2022-03-18 23:44:02] [] [RegisterObjectController.RegisterSymmetricKey():112         ] activateDate : 2022.03.10.10.45-3600
+INFO  [2022-03-18 23:44:02] [] [RegisterObjectController.RegisterSymmetricKey():113         ] keyValue : 7352CB3D949BD6F285E0AB10D020EA6E7352CB3D949BD6F2
+INFO  [2022-03-18 23:44:02] [] [RegisterObjectController.RegisterSymmetricKey():114         ] extractable : 
+INFO  [2022-03-18 23:44:02] [] [RegisterObjectController.RegisterSymmetricKey():115         ] usageMask bit OR : cc
+INFO  [2022-03-18 23:44:02] [] [RegisterObjectController.RegisterSymmetricKey():116         ] canExportKey : 1
+INFO  [2022-03-18 23:44:02] [] [BaseLogging.serviceBaseLogging():77                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 23:44:02] [] [BaseLogging.serviceBaseLogging():78                         ] - Start Service: RegisterKeyProfileService.checkParams
+INFO  [2022-03-18 23:44:02] [] [BaseLogging.serviceBaseLogging():84                         ] - Result Data  : null
+INFO  [2022-03-18 23:44:02] [] [BaseLogging.serviceBaseLogging():85                         ] - End Service  : RegisterKeyProfileService.checkParams
+INFO  [2022-03-18 23:44:02] [] [BaseLogging.serviceBaseLogging():86                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 23:44:02] [] [BaseLogging.serviceBaseLogging():77                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 23:44:02] [] [BaseLogging.serviceBaseLogging():78                         ] - Start Service: RegisterKeyProfileService.registerKeyprofileInfo
+INFO  [2022-03-18 23:44:02] [] [BaseLogging.serviceBaseLogging():84                         ] - Result Data  : PRF09002
+INFO  [2022-03-18 23:44:02] [] [BaseLogging.serviceBaseLogging():85                         ] - End Service  : RegisterKeyProfileService.registerKeyprofileInfo
+INFO  [2022-03-18 23:44:02] [] [BaseLogging.serviceBaseLogging():86                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 23:44:02] [] [RegisterObjectController.registerKeyProfileFunc():197       ] serviceId : 8D550C3D61508DF90461D08CAEC9328BADB0D12FD2372CB215F1EC0E3A0FB227
+INFO  [2022-03-18 23:44:02] [] [RegisterObjectController.RegisterSymmetricKey():152         ] keyProfileId : PRF09002
+INFO  [2022-03-18 23:44:02] [] [RegisterObjectController.RegisterSymmetricKey():153         ] serviceId : 8D550C3D61508DF90461D08CAEC9328BADB0D12FD2372CB215F1EC0E3A0FB227
+INFO  [2022-03-18 23:44:02] [] [BaseLogging.serviceBaseLogging():77                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 23:44:02] [] [BaseLogging.serviceBaseLogging():78                         ] - Start Service: ImportSymmetricKeyService.checkKeyProfileStatus
+INFO  [2022-03-18 23:44:02] [] [BaseLogging.serviceBaseLogging():84                         ] - Result Data  : null
+INFO  [2022-03-18 23:44:02] [] [BaseLogging.serviceBaseLogging():85                         ] - End Service  : ImportSymmetricKeyService.checkKeyProfileStatus
+INFO  [2022-03-18 23:44:02] [] [BaseLogging.serviceBaseLogging():86                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 23:44:02] [] [BaseLogging.serviceBaseLogging():77                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 23:44:02] [] [BaseLogging.serviceBaseLogging():78                         ] - Start Service: ImportSymmetricKeyService.getHsmServiceInfo
+INFO  [2022-03-18 23:44:02] [] [BaseLogging.serviceBaseLogging():84                         ] - Result Data  : com.tmonet.kms.mgmt.common.vo.HsmServiceInfoVo@73316c2c
+INFO  [2022-03-18 23:44:02] [] [BaseLogging.serviceBaseLogging():85                         ] - End Service  : ImportSymmetricKeyService.getHsmServiceInfo
+INFO  [2022-03-18 23:44:02] [] [BaseLogging.serviceBaseLogging():86                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 23:44:02] [] [BaseLogging.serviceBaseLogging():77                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 23:44:02] [] [BaseLogging.serviceBaseLogging():78                         ] - Start Service: ImportSymmetricKeyService.selectKeyProfileAttrList
+INFO  [2022-03-18 23:44:02] [] [BaseLogging.serviceBaseLogging():84                         ] - Result Data  : [com.tmonet.kms.mgmt.key.vo.KeyProfileAttrListVo@381ad545, com.tmonet.kms.mgmt.key.vo.KeyProfileAttrListVo@5fac95c3, com.tmonet.kms.mgmt.key.vo.KeyProfileAttrListVo@56991ae9, com.tmonet.kms.mgmt.key.vo.KeyProfileAttrListVo@2eb15c1a, com.tmonet.kms.mgmt.key.vo.KeyProfileAttrListVo@40ef0474]
+INFO  [2022-03-18 23:44:02] [] [BaseLogging.serviceBaseLogging():85                         ] - End Service  : ImportSymmetricKeyService.selectKeyProfileAttrList
+INFO  [2022-03-18 23:44:02] [] [BaseLogging.serviceBaseLogging():86                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 23:44:02] [] [BaseLogging.serviceBaseLogging():77                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 23:44:02] [] [BaseLogging.serviceBaseLogging():78                         ] - Start Service: ImportSymmetricKeyService.makeHsmImportSymmetricKeyRequestData
+INFO  [2022-03-18 23:44:02] [] [BaseLogging.serviceBaseLogging():84                         ] - Result Data  : [
+	apiInfo={
+		apiId=HSM.SK.REG.02, 
+		apiVersion=1.0.0
+	}
+	partitionId=authrium01, 
+	cryptographicAlgorithm=AES, 
+	symmetricKeyData=7352CB3D949BD6F285E0AB10D020EA6E7352CB3D949BD6F2, 
+	keyEncryptionKeyId=null, 
+	cryptographicParameter=null
+]
+INFO  [2022-03-18 23:44:02] [] [BaseLogging.serviceBaseLogging():85                         ] - End Service  : ImportSymmetricKeyService.makeHsmImportSymmetricKeyRequestData
+INFO  [2022-03-18 23:44:02] [] [BaseLogging.serviceBaseLogging():86                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 23:44:04] [] [BaseLogging.serviceBaseLogging():77                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 23:44:04] [] [BaseLogging.serviceBaseLogging():78                         ] - Start Service: ImportSymmetricKeyService.setKeyProfileAttrListToKeyAttrList
+INFO  [2022-03-18 23:44:04] [] [BaseLogging.serviceBaseLogging():84                         ] - Result Data  : [com.tmonet.kms.mgmt.common.vo.KeyAttrListVo@68bc820c, com.tmonet.kms.mgmt.common.vo.KeyAttrListVo@4ca12d70, com.tmonet.kms.mgmt.common.vo.KeyAttrListVo@7a3b9560, com.tmonet.kms.mgmt.common.vo.KeyAttrListVo@7f631534, com.tmonet.kms.mgmt.common.vo.KeyAttrListVo@73435436]
+INFO  [2022-03-18 23:44:04] [] [BaseLogging.serviceBaseLogging():85                         ] - End Service  : ImportSymmetricKeyService.setKeyProfileAttrListToKeyAttrList
+INFO  [2022-03-18 23:44:04] [] [BaseLogging.serviceBaseLogging():86                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 23:44:04] [] [BaseLogging.serviceBaseLogging():77                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 23:44:04] [] [BaseLogging.serviceBaseLogging():78                         ] - Start Service: ImportSymmetricKeyService.setKeyAttr
+INFO  [2022-03-18 23:44:04] [] [BaseLogging.serviceBaseLogging():84                         ] - Result Data  : null
+INFO  [2022-03-18 23:44:04] [] [BaseLogging.serviceBaseLogging():85                         ] - End Service  : ImportSymmetricKeyService.setKeyAttr
+INFO  [2022-03-18 23:44:04] [] [BaseLogging.serviceBaseLogging():86                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 23:44:04] [] [BaseLogging.serviceBaseLogging():77                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 23:44:04] [] [BaseLogging.serviceBaseLogging():78                         ] - Start Service: ImportSymmetricKeyService.storeSymmetricKeyInfo
+INFO  [2022-03-18 23:44:04] [] [BaseLogging.serviceBaseLogging():84                         ] - Result Data  : null
+INFO  [2022-03-18 23:44:04] [] [BaseLogging.serviceBaseLogging():85                         ] - End Service  : ImportSymmetricKeyService.storeSymmetricKeyInfo
+INFO  [2022-03-18 23:44:04] [] [BaseLogging.serviceBaseLogging():86                         ] --------------------------------------------------------------------------------
+INFO  [2022-03-18 23:44:04] [] [RegisterObjectController.RegisterSymmetricKey():165         ] keyId : DD1ACA64588554B70F9AC6DAE180B00661F18AF410476C7014E072D3743FEBA6

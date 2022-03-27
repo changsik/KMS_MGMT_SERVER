@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tmonet.kms.mgmt.manager.mapper.ManagerMapper">
+
+	<select id="selectManagerInfo" parameterType="string" resultType="com.tmonet.kms.mgmt.manager.vo.ManagerInfoVo">
+		SELECT *
+		FROM
+			NKM_MANAGER_INFO
+		WHERE
+			ID = #{ID}
+	</select>
+
+	<insert id="insertManagerInfo" parameterType="com.tmonet.kms.mgmt.manager.vo.ManagerInfoVo">
+		INSERT INTO
+			NKM_MANAGER_INFO
+			(
+				ID,
+				PASSWORD,
+				EMAIL,
+				NAME,
+				TYPE,
+				DESCRIPTION,
+				STATUS,
+				REG_DTTM,
+				REG_USER,
+				UPT_DTTM,
+				UPT_USER
+			)
+			VALUES
+			(
+				#{ID},
+				#{PASSWORD},
+				#{EMAIL},
+				#{NAME},
+				#{TYPE},
+				#{DESCRIPTION},
+				#{STATUS},
+				DEFAULT,
+				#{REG_USER},
+				NULL,
+				NULL
+			)
+	</insert>
+	
+	<insert id="insertManagerHistory" parameterType="com.tmonet.kms.mgmt.manager.vo.ManagerHistoryVo">
+		INSERT INTO
+			NKM_MANAGER_HISTORY
+			(
+				HIST_NO,
+				ID,
+				TYPE,
+				PARAM,
+				HMAC,
+				REG_DTTM,
+				REG_USER
+			)
+			VALUES
+			(
+				NEXTVAL(SEQ_MANAGER_HIST_NO),
+				#{ID},
+				#{TYPE},
+				#{PARAM},
+				#{HMAC},
+				DEFAULT,
+				#{REG_USER}
+			)
+	</insert>
+
+	<select id="selectAllManagerInfo" resultType="com.tmonet.kms.mgmt.manager.vo.ManagerInfoVo">
+		SELECT *
+		FROM
+			NKM_MANAGER_INFO
+	</select>
+
+	<update id="updateManagerInfo" parameterType="com.tmonet.kms.mgmt.manager.vo.ManagerInfoVo">
+		UPDATE
+			NKM_MANAGER_INFO
+		SET
+			<if test="PASSWORD != null">PASSWORD = #{PASSWORD},</if>
+			<if test="EMAIL != null">EMAIL = #{EMAIL},</if>
+			<if test="NAME != null">NAME = #{NAME},</if>
+			<if test="DESCRIPTION != null">DESCRIPTION = #{DESCRIPTION},</if>
+			<if test="STATUS != null">STATUS = #{STATUS},</if>
+			UPT_DTTM = SYSDATE(),
+			UPT_USER = #{UPT_USER}
+		WHERE
+			ID = #{ID}
+	
+	</update>
+	
+	<delete id="deleteManagerInfo" parameterType="string">
+		DELETE FROM
+			NKM_MANAGER_INFO
+		WHERE
+			ID = #{ID}
+	</delete>
+
+	<delete id="deleteAllMngAuthInfo" parameterType="string">
+		DELETE FROM
+			NKM_MNG_AUTH_INFO
+		WHERE
+			ID = #{ID}
+	</delete>
+	
+	<select id="selectAllMngAuthInfo" parameterType="string" resultType="com.tmonet.kms.mgmt.manager.vo.MngAuthInfoVo">
+		SELECT *
+		FROM
+			NKM_MNG_AUTH_INFO
+		WHERE
+			ID = #{ID}
+	</select>
+	
+	<select id="selectMngAuthInfo" parameterType="com.tmonet.kms.mgmt.manager.vo.MngAuthInfoVo" resultType="com.tmonet.kms.mgmt.manager.vo.MngAuthInfoVo">
+		SELECT *
+		FROM
+			NKM_MNG_AUTH_INFO
+		WHERE
+			ID = #{ID} AND
+			SERVICE_ID = #{SERVICE_ID}
+	</select>
+	
+	
+	<insert id="insertMngAuthHistory" parameterType="com.tmonet.kms.mgmt.manager.vo.MngAuthHistoryVo">
+		INSERT INTO
+			NKM_MNG_AUTH_HISTORY
+			(
+				HIST_NO,
+				ID,
+				SERVICE_ID,
+				TYPE,
+				PARAM,
+				HMAC,
+				REG_DTTM,
+				REG_USER
+			)
+			VALUES
+			(
+				NEXTVAL(SEQ_MNG_AUTH_HIST_NO),
+				#{ID},
+				#{SERVICE_ID},
+				#{TYPE},
+				#{PARAM},
+				#{HMAC},
+				DEFAULT,
+				#{REG_USER}
+			)
+	</insert>
+
+	<select id="selectPartitionInfo" parameterType="string" resultType="com.tmonet.kms.mgmt.partition.vo.PartitionInfoVo">
+		SELECT *
+		FROM
+			NKM_PARTITION_INFO
+		WHERE
+			SERVICE_ID = #{SERVICE_ID}
+	</select>
+
+	<insert id="insertMngAuthInfo" parameterType="com.tmonet.kms.mgmt.manager.vo.MngAuthInfoVo">
+		INSERT INTO
+			NKM_MNG_AUTH_INFO
+			(
+				ID,
+				SERVICE_ID,
+				CREATE_YN,
+				READ_YN,
+				UPDATE_YN,
+				DELETE_YN,
+				REG_DTTM,
+				REG_USER,
+				UPT_DTTM,
+				UPT_USER
+			)
+			VALUES
+			(
+				#{ID},
+				#{SERVICE_ID},
+				#{CREATE_YN},
+				#{READ_YN},
+				#{UPDATE_YN},
+				#{DELETE_YN},
+				DEFAULT,
+				#{REG_USER},
+				NULL,
+				NULL
+			)
+	</insert>
+
+	<update id="updateMngAuthInfo" parameterType="com.tmonet.kms.mgmt.manager.vo.MngAuthInfoVo">
+		UPDATE
+			NKM_MNG_AUTH_INFO
+		SET
+			<if test="CREATE_YN != null">CREATE_YN = #{CREATE_YN},</if>
+			<if test="READ_YN != null">READ_YN = #{READ_YN},</if>
+			<if test="UPDATE_YN != null">UPDATE_YN = #{UPDATE_YN},</if>
+			<if test="DELETE_YN != null">DELETE_YN = #{DELETE_YN},</if>
+			UPT_DTTM = SYSDATE(),
+			UPT_USER = #{UPT_USER}
+		WHERE
+			ID = #{ID} AND
+			SERVICE_ID = #{SERVICE_ID}
+	</update>
+
+	<delete id="deleteMngAuthInfo" parameterType="com.tmonet.kms.mgmt.manager.vo.MngAuthInfoVo">
+		DELETE
+		FROM
+			NKM_MNG_AUTH_INFO
+		WHERE
+			ID = #{ID} AND
+			SERVICE_ID = #{SERVICE_ID}
+	</delete>
+
+	<select id="selectManagerPw" parameterType="string" resultType="string">
+		SELECT
+			PASSWORD
+		FROM
+			NKM_MANAGER_INFO
+		WHERE
+			ID = #{ID}
+	</select>
+
+</mapper>

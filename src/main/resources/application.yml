@@ -1,0 +1,76 @@
+serverConfigFilePath: /appstore/KMS/kms-management-server/assets/KMS_MGMT_SERVER.json
+
+env:
+  projectDesc: KMS Management Server
+  key: 115daa80026e67d7be132673a7a555d1881c27b22d894b3c4dd16d3a55ba92b88cc
+  
+tmonet:
+  project-name: KMSManagementServer
+  
+server:
+  port: 7000
+  
+spring:
+  output:
+    ansi:
+      enabled: ALWAYS
+  profiles:
+    active: local
+    include:
+    - console-logging
+    - file-logging
+    
+# 로컬개발환경
+---
+spring:
+  profiles: local
+  datasource:
+    url: jdbc:mariadb://3.37.46.254:3306/KMS?characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: tmonet2k
+    driver-class-name: org.mariadb.jdbc.Driver
+  mvc:    log-request-details: true
+mybatis:
+  mapper-locations: /mapper/*.xml
+logging:
+  level:
+    root: info
+    com.tmonet: info
+  file:
+    path: logs
+    name: ${tmonet.project-name}
+
+# 테스트환경
+---
+spring:
+  profiles: test
+  datasource:
+     url: jdbc:mariadb://172.20.22.133:33303/KMS?characterEncoding=UTF-8&serverTimezone=UTC
+     username: root
+     password: tmonet2k
+     driver-class-name: org.mariadb.jdbc.Driver
+  mvc:
+    log-request-details: true
+mybatis:
+  mapper-locations: /mapper/*.xml
+logging:
+  level:
+    root: debug
+    com.tmonet: debug
+  file:
+    path: /webstore/logs/${tmonet.project-name}
+    name: ${tmonet.project-name}
+    
+# 운영환경
+---
+spring:
+  profiles: prod
+logging:
+  level:
+    root: off
+    com.tmonet: debug
+  file:
+    path: /webstore/logs/${tmonet.project-name}
+    name: ${tmonet.project-name}
+    
+  

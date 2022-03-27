@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tmonet.kms.mgmt.kmsp.register.RegisterObjectMapper">
+	
+	<select id="selectPartitionInfo" parameterType="com.tmonet.kms.mgmt.partition.vo.PartitionInfoVo" resultType="com.tmonet.kms.mgmt.partition.vo.PartitionInfoVo">
+		SELECT *
+		FROM
+			NKM_PARTITION_INFO
+		WHERE
+			PARTITION_ID = #{PARTITION_ID} AND
+			GROUP_ID = #{GROUP_ID}
+	</select>
+	
+	<select id="selectAllPartitionInfo" resultType="com.tmonet.kms.mgmt.partition.vo.PartitionInfoVo">
+		SELECT *
+		FROM
+			NKM_PARTITION_INFO
+	</select>
+
+	<insert id="insertPartitionInfo" parameterType="com.tmonet.kms.mgmt.partition.vo.PartitionInfoVo">
+		INSERT INTO
+			NKM_PARTITION_INFO
+			(
+				PARTITION_ID,
+				GROUP_ID,
+				SERVICE_ID,
+				PASSWORD,
+				PROTECT_MODE,
+				IDENT,
+				DESCRIPTION,
+				REG_DTTM,
+				REG_USER,
+				UPT_USER,
+				UPT_DTTM
+			)
+			VALUES
+			(
+				#{PARTITION_ID},
+				#{GROUP_ID},
+				#{SERVICE_ID},
+				#{PASSWORD},
+				#{PROTECT_MODE},
+				#{IDENT},
+				#{DESCRIPTION},
+				DEFAULT,
+				#{REG_USER},
+				NULL,
+				NULL
+			)
+	</insert>
+	
+	<update id="updatePartitionInfo" parameterType="com.tmonet.kms.mgmt.partition.vo.PartitionInfoVo">
+		UPDATE
+			NKM_PARTITION_INFO
+		SET
+			<if test="PASSWORD != null">PASSWORD = #{PASSWORD},</if>
+			<if test="PROTECT_MODE != null">PROTECT_MODE = #{PROTECT_MODE},</if>
+			<if test="IDENT != null">IDENT = #{IDENT},</if>
+			<if test="DESCRIPTION != null">DESCRIPTION = #{DESCRIPTION},</if>
+			UPT_USER = #{UPT_USER},
+			UPT_DTTM = SYSDATE()
+		WHERE
+			PARTITION_ID = #{PARTITION_ID} AND
+			GROUP_ID = #{GROUP_ID}
+	</update>
+
+	<update id="deletePartitionInfo" parameterType="com.tmonet.kms.mgmt.partition.vo.PartitionInfoVo">
+		DELETE
+		FROM
+			NKM_PARTITION_INFO
+		WHERE
+			PARTITION_ID = #{PARTITION_ID} AND
+			GROUP_ID = #{GROUP_ID}
+	</update>
+
+	<insert id="insertHsmHistory" parameterType="com.tmonet.kms.mgmt.common.vo.HsmHistoryVo">
+		INSERT INTO
+			NKM_HSM_HISTORY
+			(
+				HIST_NO,
+				HSM_ID,
+				PARTITION_ID,
+				GROUP_ID,
+				TYPE,
+				PARAM,
+				HMAC,
+				REG_DTTM,
+				REG_USER
+			)
+			VALUES
+			(
+				NEXTVAL(SEQ_HSM_HIST_NO),
+				#{HSM_ID},
+				#{PARTITION_ID},
+				#{GROUP_ID},
+				#{TYPE},
+				#{PARAM},
+				#{HMAC},
+				DEFAULT,
+				#{REG_USER}
+			)
+	</insert>
+	
+	<select id="countMngAuthInfo" parameterType="string" resultType="int">
+		SELECT
+			COUNT(*)
+		FROM
+			NKM_MNG_AUTH_INFO
+		WHERE
+			SERVICE_ID = #{SERVICE_ID}
+	</select>
+
+	<select id="countCliAuthInfo" parameterType="string" resultType="int">
+		SELECT
+			COUNT(*)
+		FROM
+			NKM_CLI_AUTH_INFO
+		WHERE
+			SERVICE_ID = #{SERVICE_ID}
+	</select>
+
+
+	<select id="countKeyList" parameterType="com.tmonet.kms.mgmt.partition.vo.PartitionInfoVo" resultType="int">
+		SELECT
+			COUNT(*)
+		FROM
+			NKM_KEY_LIST
+		WHERE
+			PARTITION_ID = #{PARTITION_ID} AND
+			GROUP_ID = #{GROUP_ID}
+	</select>
+
+	<select id="selectHsmGroupInfo" parameterType="string" resultType="com.tmonet.kms.mgmt.hsmgroup.vo.HsmGroupInfoVo">
+		SELECT *
+		FROM
+			NKM_HSM_GROUP_INFO
+		WHERE
+			GROUP_ID = #{GROUP_ID}
+	</select>
+	
+	<select id="selectAllPatOfGroup" parameterType="string" resultType="com.tmonet.kms.mgmt.partition.vo.PartitionInfoVo">
+		SELECT *
+		FROM
+			NKM_PARTITION_INFO
+		WHERE
+			GROUP_ID = #{GROUP_ID}
+	</select>
+</mapper>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    
+	<springProperty name="LOG_PATH" source="logging.file.path"/>
+	<springProperty name="LOG_FILE" source="logging.file.name"/>
+	<springProperty name="ROOT_LEVEL" source="logging.level.root"/>
+	<springProperty name="PROJECT_LEVEL" source="logging.level.com.tmonet"/>
+	
+	<property name="ROLLING_FILE_NAME_PATTERN" value="${LOG_PATH}/${LOG_FILE}-%d{yyyy-MM-dd}.%i.log"/>
+	
+	<springProfile name="console-logging">
+		<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+			<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+				<charset>UTF-8</charset>
+				<pattern>
+					%-5level [%d{yyyy-MM-dd HH:mm:ss}] [%X{req.session_id}] [%-60(%class{0}.%method\(\):%line)] %m%n
+				</pattern>
+			</encoder>
+		</appender>
+	</springProfile>
+
+	<springProfile name="file-logging">
+		<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+			<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+				<charset>UTF-8</charset>
+				<pattern>
+					%-5level [%d{yyyy-MM-dd HH:mm:ss}] [%X{req.session_id}] [%-60(%class{0}.%method\(\):%line)] %m%n
+				</pattern>
+			</encoder>
+			<file>${LOG_PATH}/${LOG_FILE}.log</file>
+			<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+				<fileNamePattern>${ROLLING_FILE_NAME_PATTERN}</fileNamePattern>
+				<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+					<maxFileSize>100MB</maxFileSize>
+				</timeBasedFileNamingAndTriggeringPolicy>
+			</rollingPolicy>
+		</appender>
+	</springProfile>
+
+	<root level="${ROOT_LEVEL}">
+		<springProfile name="console-logging">
+			<appender-ref ref="CONSOLE" />
+		</springProfile>
+		<springProfile name="file-logging">
+			<appender-ref ref="FILE" />
+		</springProfile>
+	</root>
+	
+	<logger name="com.tmonet" level="${PROJECT_LEVEL}" additivity="false">
+		<springProfile name="console-logging">
+			<appender-ref ref="CONSOLE" />
+		</springProfile>
+		<springProfile name="file-logging">
+			<appender-ref ref="FILE" />
+		</springProfile>
+	</logger>
+
+</configuration>

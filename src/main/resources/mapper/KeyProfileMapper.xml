@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tmonet.kms.mgmt.keyprofile.mapper.KeyProfileMapper">
+	<select id="countKeyId" parameterType="string" resultType="int">
+		SELECT
+			COUNT(*)
+		FROM
+			NKM_KEY_LIST
+		WHERE
+			PROFILE_ID = #{PROFILE_ID}
+	</select>
+	
+	<insert id="insertKeyProfileInfo" parameterType="com.tmonet.kms.mgmt.keyprofile.vo.KeyProfileInfoVo">
+		INSERT INTO
+			NKM_KEY_PROFILE_INFO
+			(
+				PROFILE_ID,
+				NAME,
+				DESCRIPTION,
+				STATUS,
+				REG_DTTM,
+				REG_USER,
+				UPT_DTTM,
+				UPT_USER
+			)
+			VALUES
+			(
+				(SELECT CONCAT('PRF',LPAD(NEXTVAL(SEQ_KEY_PROFILE_ID),5,'0'))), 
+				#{NAME}, 
+				#{DESCRIPTION}, 
+				#{STATUS}, 
+				DEFAULT, 
+				#{REG_USER}, 
+				NULL, 
+				NULL
+			)
+	</insert>
+	
+	<insert id="insertKeyProfileAttr" parameterType="com.tmonet.kms.mgmt.keyprofile.vo.KeyProfileAttrListVo">
+		INSERT INTO
+			NKM_KEY_PROFILE_ATTR_LIST
+			(
+				PROFILE_ID,
+				ATTR_ID,
+				ATTR_DEFAULT,
+				REG_DTTM,
+				REG_USER,
+				UPT_DTTM,
+				UPT_USER
+			)
+			VALUES
+			(
+				(SELECT CONCAT('PRF',LPAD(LASTVAL(SEQ_KEY_PROFILE_ID),5,'0'))), 
+				#{ATTR_ID}, 
+				#{ATTR_DEFAULT},
+				DEFAULT, 
+				#{REG_USER}, 
+				NULL, 
+				NULL
+			)
+	</insert>
+	
+	<insert id="insertToUpdateAttr" parameterType="com.tmonet.kms.mgmt.keyprofile.vo.KeyProfileAttrListVo">
+		INSERT INTO
+			NKM_KEY_PROFILE_ATTR_LIST
+			(
+				PROFILE_ID,
+				ATTR_ID,
+				ATTR_DEFAULT,
+				REG_DTTM,
+				REG_USER,
+				UPT_DTTM,
+				UPT_USER
+			)
+			VALUES
+			(
+				#{PROFILE_ID}, 
+				#{ATTR_ID}, 
+				#{ATTR_DEFAULT},
+				DEFAULT, 
+				#{REG_USER}, 
+				NULL, 
+				NULL
+			)
+	</insert>
+	
+	<select id="selectRegisteredKeyProfile" resultType="com.tmonet.kms.mgmt.keyprofile.vo.KeyProfileInfoVo">
+		SELECT
+			PROFILE_ID,
+			NAME,
+			DESCRIPTION,
+			STATUS,
+			REG_DTTM,
+			REG_USER,
+			UPT_DTTM,
+			UPT_USER
+		FROM
+			NKM_KEY_PROFILE_INFO
+		WHERE
+			PROFILE_ID = (SELECT CONCAT('PRF',LPAD(LASTVAL(SEQ_KEY_PROFILE_ID),5,'0')))
+	</select>
+	
+	<select id="selectUpdatedKeyProfile" parameterType="string" resultType="com.tmonet.kms.mgmt.keyprofile.vo.KeyProfileInfoVo">
+		SELECT
+			REG_DTTM, UPT_DTTM
+		FROM
+			NKM_KEY_PROFILE_INFO
+		WHERE
+			PROFILE_ID = #{PROFILE_ID}
+	</select>
+	
+	<select id="selectKeyProfileInfo" parameterType="string" resultType="com.tmonet.kms.mgmt.keyprofile.vo.KeyProfileInfoVo">
+		SELECT *
+		FROM
+			NKM_KEY_PROFILE_INFO
+		WHERE
+			PROFILE_ID = #{PROFILE_ID}
+	</select>
+	
+	<select id="selectAllKeyProfileInfo" resultType="com.tmonet.kms.mgmt.keyprofile.vo.KeyProfileInfoVo">
+		SELECT *
+		FROM
+			NKM_KEY_PROFILE_INFO
+	</select>
+	
+	<select id="selectKeyProfileAttrList" parameterType="com.tmonet.kms.mgmt.keyprofile.vo.KeyProfileAttrListVo" resultType="com.tmonet.kms.mgmt.keyprofile.vo.KeyProfileAttrListVo">
+		SELECT
+			PROFILE_ID,
+			ATTR_ID,
+			ATTR_DEFAULT,
+			REG_DTTM,
+			REG_USER,
+			UPT_DTTM,
+			UPT_USER
+		FROM
+			NKM_KEY_PROFILE_ATTR_LIST
+		WHERE
+			PROFILE_ID = #{PROFILE_ID} AND
+			ATTR_ID = #{ATTR_ID}
+	</select>
+	
+	<select id="selectAllKeyProfileAttrList" parameterType="string" resultType="com.tmonet.kms.mgmt.keyprofile.vo.KeyAttribute">
+		SELECT
+			ATTR_ID as keyAttributeId, ATTR_DEFAULT as keyAttributeValue
+		FROM
+			NKM_KEY_PROFILE_ATTR_LIST
+		WHERE
+			PROFILE_ID = #{PROFILE_ID}
+	</select>
+	
+	<select id="countAttrList" parameterType="string" resultType="int">
+		SELECT
+			COUNT(*)
+		FROM
+			NKM_KEY_PROFILE_ATTR_LIST
+		WHERE
+			PROFILE_ID = #{PROFILE_ID}
+	</select>
+	
+	<update id="updateKeyProfileInfo" parameterType="com.tmonet.kms.mgmt.keyprofile.vo.KeyProfileInfoVo">
+		UPDATE
+			NKM_KEY_PROFILE_INFO
+		SET
+			<if test="NAME != null">NAME = #{NAME},</if>
+			<if test="DESCRIPTION != null">DESCRIPTION = #{DESCRIPTION},</if>
+			<if test="STATUS != null">STATUS = #{STATUS},</if>
+			UPT_DTTM = SYSDATE(),
+			UPT_USER = #{UPT_USER}
+		WHERE
+			PROFILE_ID = #{PROFILE_ID}
+	</update>
+	
+	<update id="updateKeyAttrList" parameterType="com.tmonet.kms.mgmt.keyprofile.vo.KeyProfileAttrListVo">
+		UPDATE
+			NKM_KEY_PROFILE_ATTR_LIST
+		SET
+			ATTR_DEFAULT = #{ATTR_DEFAULT},
+			UPT_DTTM = SYSDATE(),
+			UPT_USER = #{UPT_USER}
+		WHERE
+			PROFILE_ID = #{PROFILE_ID}
+			AND ATTR_ID = #{ATTR_ID}
+	</update>
+	
+	<insert id="insertKeyAttrList" parameterType="com.tmonet.kms.mgmt.keyprofile.vo.KeyProfileAttrListVo">
+		INSERT INTO
+			NKM_KEY_PROFILE_ATTR_LIST
+		VALUES
+		(
+			#{PROFILE_ID}, 
+			#{ATTR_ID}, 
+			#{ATTR_DEFAULT}, 
+			#{FIXED_YN}, 
+			DEFAULT, 
+			#{REG_USER}, 
+			NULL, 
+			NULL
+		)
+	</insert>
+	
+	<delete id="deleteKeyProfileAttrList" parameterType="com.tmonet.kms.mgmt.keyprofile.vo.KeyProfileAttrListVo">
+		DELETE
+		FROM
+			NKM_KEY_PROFILE_ATTR_LIST
+		WHERE
+			PROFILE_ID = #{PROFILE_ID} AND
+			ATTR_ID = #{ATTR_ID}
+	</delete>
+	
+	<delete id="deleteAllKeyProfileAttrList" parameterType="string">
+		DELETE
+		FROM
+			NKM_KEY_PROFILE_ATTR_LIST
+		WHERE
+			PROFILE_ID = #{PROFILE_ID}
+	</delete>
+	
+	<delete id="deleteKeyProfileInfo" parameterType="string">
+		DELETE
+		FROM
+			NKM_KEY_PROFILE_INFO
+		WHERE
+			PROFILE_ID = #{PROFILE_ID}
+	</delete>
+	
+	<insert id="insertKeyProfileHistory" parameterType="com.tmonet.kms.mgmt.keyprofile.vo.KeyProfileHistoryVo">
+		INSERT INTO
+			NKM_KEY_PROFILE_HISTORY
+			(
+				HIST_NO,
+				PROFILE_ID,
+				ATTR_ID,
+				TYPE,
+				PARAM,
+				HMAC,
+				REG_DTTM,
+				REG_USER
+			)
+			VALUES
+			(
+				NEXTVAL(SEQ_KEY_PROFILE_HIST_NO),
+				#{PROFILE_ID},
+				#{ATTR_ID},
+				#{TYPE},
+				#{PARAM},
+				#{HMAC},
+				DEFAULT,
+				#{REG_USER} 
+			)
+	</insert>
+</mapper>

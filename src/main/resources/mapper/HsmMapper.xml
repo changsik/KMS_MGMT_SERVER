@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tmonet.kms.mgmt.hsm.mapper.HsmMapper">
+	<insert id="insertHsmInfo" parameterType="com.tmonet.kms.mgmt.hsm.vo.HsmInfoVo">
+		INSERT INTO
+			NKM_HSM_INFO
+			(
+				HSM_ID,
+				GROUP_ID,
+				IP_ADDR,
+				VENDOR,
+				SERIAL,
+				INSTALL_TYPE,
+				DESCRIPTION,
+				REG_DTTM,
+				REG_USER,
+				UPT_DTTM,
+				UPT_USER
+			)
+			VALUES
+			(
+				(SELECT CONCAT('HSM',LPAD(NEXTVAL(SEQ_HSM_ID),5,'0'))),
+				#{GROUP_ID},
+				#{IP_ADDR},
+				#{VENDOR},
+				#{SERIAL},
+				#{INSTALL_TYPE},
+				#{DESCRIPTION},
+				DEFAULT,
+				#{REG_USER},
+				NULL,
+				NULL
+			)
+	</insert>
+	
+	<select id="selectRegisteredHsmInfo" resultType="com.tmonet.kms.mgmt.hsm.vo.HsmInfoVo">
+		SELECT *
+		FROM
+			NKM_HSM_INFO
+		WHERE
+			HSM_ID = (SELECT CONCAT('HSM',LPAD(LASTVAL(SEQ_HSM_ID),5,'0')))
+	</select>
+	
+	<select id="selectHsmInfo" parameterType="com.tmonet.kms.mgmt.hsm.vo.HsmInfoVo" resultType="com.tmonet.kms.mgmt.hsm.vo.HsmInfoVo">
+		SELECT *
+		FROM
+			NKM_HSM_INFO
+		WHERE
+			HSM_ID = #{HSM_ID} 
+			<if test="GROUP_ID != null">AND GROUP_ID = #{GROUP_ID}</if>
+	</select>
+	
+	<select id="selectAllHsmInfo" resultType="com.tmonet.kms.mgmt.hsm.vo.HsmInfoVo">
+		SELECT *
+		FROM
+			NKM_HSM_INFO
+	</select>
+	
+	<select id="selectAllHsmOfGroup" parameterType="string" resultType="com.tmonet.kms.mgmt.hsm.vo.HsmInfoVo">
+		SELECT *
+		FROM
+			NKM_HSM_INFO
+		WHERE
+			GROUP_ID = #{GROUP_ID}
+	</select>
+	
+	<update id="updateHsmInfo" parameterType="com.tmonet.kms.mgmt.hsm.vo.HsmInfoVo">
+		UPDATE
+			NKM_HSM_INFO
+		SET
+			<if test="VENDOR != null">VENDOR = #{VENDOR},</if>
+			<if test="SERIAL != null">SERIAL = #{SERIAL},</if>
+			<if test="INSTALL_TYPE != null">INSTALL_TYPE = #{INSTALL_TYPE},</if>
+			<if test="IP_ADDR != null">IP_ADDR = #{IP_ADDR},</if>
+			UPT_DTTM = SYSDATE(),
+			UPT_USER = #{UPT_USER}
+		WHERE
+			HSM_ID = #{HSM_ID}
+	</update>
+	
+	<update id="deleteHsmInfo" parameterType="string">
+		DELETE
+		FROM
+			NKM_HSM_INFO
+		WHERE
+			HSM_ID = #{HSM_ID}
+	</update>
+	
+	<insert id="insertHsmHistory" parameterType="com.tmonet.kms.mgmt.common.vo.HsmHistoryVo">
+		INSERT INTO
+			NKM_HSM_HISTORY
+			(
+				HIST_NO,
+				HSM_ID,
+				PARTITION_ID,
+				GROUP_ID,
+				TYPE,
+				PARAM,
+				HMAC,
+				REG_DTTM,
+				REG_USER
+			)
+			VALUES
+			(
+				NEXTVAL(SEQ_HSM_HIST_NO),
+				#{HSM_ID},
+				#{PARTITION_ID},
+				#{GROUP_ID},
+				#{TYPE},
+				#{PARAM},
+				#{HMAC},
+				DEFAULT,
+				#{REG_USER}
+			)
+	</insert>
+	
+	<select id="selectAllHsmCtlList" parameterType="string" resultType="com.tmonet.kms.mgmt.hsmctl.vo.HsmCtlListVo">
+		SELECT *
+		FROM
+			NKM_HSM_CTL_LIST
+		WHERE
+			HSM_ID = #{HSM_ID}
+	</select>
+	
+	<delete id="deleteAllHsmCtlList" parameterType="string">
+		DELETE
+		FROM
+			NKM_HSM_CTL_LIST
+		WHERE
+			HSM_ID = #{HSM_ID}
+	</delete>
+	
+	<insert id="insertHsmCtlSvrHistory" parameterType="com.tmonet.kms.mgmt.hsmctl.vo.HsmCtlSvrHistoryVo">
+		INSERT INTO
+			NKM_CTLSVR_HISTORY
+			(
+				HIST_NO,
+				CTLSVR_ID,
+				GROUP_ID,
+				HSM_ID,
+				TYPE,
+				PARAM,
+				HMAC,
+				REG_DTTM,
+				REG_USER
+			)
+			VALUES
+			(
+				NEXTVAL(SEQ_CTLSVR_HIST_NO),
+				#{CTLSVR_ID},
+				#{GROUP_ID},
+				#{HSM_ID},
+				#{TYPE},
+				#{PARAM},
+				#{HMAC},
+				DEFAULT,
+				#{REG_USER}
+			)
+	</insert>
+	
+	<select id="selectHsmGroupInfo" parameterType="string" resultType="com.tmonet.kms.mgmt.hsmgroup.vo.HsmGroupInfoVo">
+		SELECT *
+		FROM
+			NKM_HSM_GROUP_INFO
+		WHERE
+			GROUP_ID = (
+							SELECT GROUP_ID
+							FROM NKM_HSM_INFO
+							WHERE HSM_ID = #{HSM_ID}
+						)
+	</select>
+	
+</mapper>

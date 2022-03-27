@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tmonet.kms.mgmt.hsmgroup.mapper.HsmGroupMapper">
+	<insert id="insertHsmGroupInfo" parameterType="com.tmonet.kms.mgmt.hsmgroup.vo.HsmGroupInfoVo" >
+		INSERT 
+			INTO
+			NKM_HSM_GROUP_INFO
+			(
+				GROUP_ID,
+				SLB_IP_ADDR,
+				SLB_PORT,
+				DESCRIPTION,
+				REG_DTTM,
+				REG_USER
+			)
+			VALUES
+			(
+				#{GROUP_ID},
+				#{SLB_IP_ADDR},
+				#{SLB_PORT},
+				#{DESCRIPTION},
+				SYSDATE(),
+				#{REG_USER}
+			)
+    	<selectKey order="BEFORE" resultType="string" keyColumn="GROUP_ID" keyProperty="GROUP_ID">
+    		SELECT CONCAT('GRP',LPAD(NEXTVAL(SEQ_HSM_GROUP_ID), 5, '0'))
+		</selectKey>
+	</insert>
+	
+	<select id="selectAllHsmGroupInfo" resultType="com.tmonet.kms.mgmt.hsmgroup.vo.HsmGroupInfoVo">
+		SELECT * FROM NKM_HSM_GROUP_INFO
+	</select>
+	
+	<select id="selectHsmGroupInfo" parameterType="string" resultType="com.tmonet.kms.mgmt.hsmgroup.vo.HsmGroupInfoVo">
+		SELECT * FROM NKM_HSM_GROUP_INFO
+		WHERE
+			GROUP_ID = #{GROUP_ID}
+	</select>
+	
+	<update id="updateHsmGroupInfo" parameterType="com.tmonet.kms.mgmt.hsmgroup.vo.HsmGroupInfoVo">
+		UPDATE 
+    		NKM_HSM_GROUP_INFO 
+    	SET
+   			SLB_IP_ADDR = #{SLB_IP_ADDR},
+   			SLB_PORT = #{SLB_PORT},
+   			DESCRIPTION = #{DESCRIPTION},
+   			UPT_DTTM = SYSDATE(),
+   			UPT_USER = #{UPT_USER}
+   		WHERE
+    		GROUP_ID = #{GROUP_ID}
+	</update>
+	
+	<delete id="deleteHsmGroupInfo" parameterType="string">
+		DELETE FROM 
+			NKM_HSM_GROUP_INFO 
+   		WHERE
+    		GROUP_ID = #{GROUP_ID}
+	</delete>
+	
+	<insert id="insertHsmHistory" parameterType="com.tmonet.kms.mgmt.common.vo.HsmHistoryVo">
+		INSERT 
+        	INTO 
+       	NKM_HSM_HISTORY
+    	(
+    		HIST_NO,
+    		GROUP_ID,
+    		TYPE,
+    		PARAM,
+    		HMAC,
+    		REG_DTTM,
+    		REG_USER
+    	)
+    	VALUES
+    	(
+    		#{HIST_NO},
+    		#{GROUP_ID},
+    		#{TYPE},
+    		#{PARAM},
+    		#{HMAC},
+    		SYSDATE(),
+    		#{REG_USER}
+    	)
+    	
+   		<selectKey order="BEFORE" resultType="integer" keyColumn="HIST_NO" keyProperty="HIST_NO">
+    		SELECT NEXTVAL(SEQ_HSM_HIST_NO)
+		</selectKey>
+	</insert>
+</mapper>

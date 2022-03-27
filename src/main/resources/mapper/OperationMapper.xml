@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tmonet.kms.mgmt.operation.mapper.OperationMapper">
+	<select id="selectKeyList" parameterType="string" resultType="com.tmonet.kms.mgmt.common.vo.KeyListVo">
+		SELECT
+			KEY_ID,
+			PARTITION_ID,
+			GROUP_ID,
+			PROFILE_ID,
+			KEY_STATUS,
+			REG_DTTM,
+			REG_USER,
+			UPT_DTTM,
+			UPT_USER
+		FROM NKM_KEY_LIST
+		WHERE
+			KEY_ID = #{KEY_ID}
+	</select>
+	
+	<select id="selectKeyAttrList" parameterType="com.tmonet.kms.mgmt.common.vo.KeyListVo" resultType="com.tmonet.kms.mgmt.common.vo.KeyAttrListVo">
+		SELECT
+			KEY_ID,
+			PARTITION_ID,
+			GROUP_ID,
+			ATTR_ID,
+			VALUE,
+			REG_DTTM,
+			REG_USER,
+			UPT_DTTM,
+			UPT_USER
+		FROM NKM_KEY_ATTR_LIST
+		WHERE
+			KEY_ID = #{KEY_ID} AND 
+			PARTITION_ID = #{PARTITION_ID} AND 
+			GROUP_ID = #{GROUP_ID}
+	</select>
+	
+    <select id="selectHsmServiceInfo" parameterType="string" resultType="com.tmonet.kms.mgmt.common.vo.HsmServiceInfoVo">
+		SELECT
+			npi.PARTITION_ID,
+			npi.GROUP_ID,
+			nhgi.SLB_IP_ADDR,
+			nhgi.SLB_PORT
+		FROM NKM_PARTITION_INFO npi
+		INNER JOIN NKM_HSM_GROUP_INFO nhgi ON nhgi.GROUP_ID = npi.GROUP_ID
+		WHERE
+			SERVICE_ID = #{SERVICE_ID}
+	</select>
+	
+    <insert id="insertKeyHistory" parameterType="com.tmonet.kms.mgmt.key.vo.KeyHistoryVo">
+        INSERT 
+        	INTO 
+       	NKM_KEY_HISTORY
+    	(
+    		HIST_NO,
+    		KEY_ID,
+    		PARTITION_ID,
+    		GROUP_ID,
+    		TYPE,
+    		PARAM,
+    		HMAC,
+    		REG_USER
+    	)
+    	VALUES
+    	(
+    		#{HIST_NO},
+    		#{KEY_ID},
+    		#{PARTITION_ID},
+    		#{GROUP_ID},
+    		#{TYPE},
+    		#{PARAM},
+    		#{HMAC},
+    		#{REG_USER}
+    	)
+    	
+    	<selectKey order="BEFORE" resultType="integer" keyColumn="HIST_NO" keyProperty="HIST_NO">
+    		SELECT NEXTVAL(SEQ_KEY_HIST_NO)
+		</selectKey>
+    </insert>
+</mapper>

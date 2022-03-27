@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tmonet.kms.mgmt.keylifecycle.mapper.KeyLifecycleMapper">
+
+	<update id="changeCliKeyStatus" parameterType="com.tmonet.kms.mgmt.client.vo.ClientKeyListVo">
+		UPDATE
+			NKM_CLIENT_KEY_LIST
+		SET
+			STATUS = #{STATUS},
+			UPT_DTTM = SYSDATE(),
+			UPT_USER = #{UPT_USER}
+		WHERE
+			KEY_ID = #{KEY_ID}
+	</update>
+	
+  	<update id="changeKeyStatus" parameterType="com.tmonet.kms.mgmt.common.vo.KeyListVo">
+  		UPDATE
+  			NKM_KEY_LIST
+  		SET
+  			KEY_STATUS = #{KEY_STATUS},
+  			UPT_DTTM = SYSDATE(),
+  			UPT_USER = #{UPT_USER}
+  		WHERE
+  			KEY_ID = #{KEY_ID} AND
+  			PARTITION_ID = #{PARTITION_ID} AND
+  			GROUP_ID = #{GROUP_ID}
+  	</update>
+  	
+  	<select id="selectClientKeyList" parameterType="string" resultType="com.tmonet.kms.mgmt.client.vo.ClientKeyListVo">
+  		SELECT *
+  		FROM
+  			NKM_CLIENT_KEY_LIST
+  		WHERE
+  			KEY_ID = #{KEY_ID}
+  	</select>
+  	
+  	<select id="selectKeyList" parameterType="com.tmonet.kms.mgmt.common.vo.KeyListVo" resultType="com.tmonet.kms.mgmt.common.vo.KeyListVo">
+  		SELECT *
+  		FROM
+  			NKM_KEY_LIST
+  		WHERE
+  			KEY_ID = #{KEY_ID} AND
+  			PARTITION_ID = #{PARTITION_ID} AND
+  			GROUP_ID = #{GROUP_ID}
+  	</select>
+  	
+  	<insert id="insertKeyHistory" parameterType="com.tmonet.kms.mgmt.key.vo.KeyHistoryVo">
+  		INSERT INTO
+  			NKM_KEY_HISTORY
+  			(
+  				HIST_NO,
+  				KEY_ID,
+  				PARTITION_ID,
+  				GROUP_ID,
+  				TYPE,
+  				PARAM,
+  				HMAC,
+  				REG_DTTM,
+  				REG_USER
+  			)
+  		VALUES
+  			(
+  				NEXTVAL(SEQ_KEY_HIST_NO),
+  				#{KEY_ID},
+  				#{PARTITION_ID},
+  				#{GROUP_ID},
+  				#{TYPE},
+  				#{PARAM},
+  				#{HMAC},
+  				SYSDATE(),
+  				#{REG_USER}
+  			)
+  	</insert>
+  	
+</mapper>

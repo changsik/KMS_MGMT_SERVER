@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tmonet.kms.mgmt.client.mapper.ClientMapper">
+
+	<insert id="insertClientInfo" parameterType="com.tmonet.kms.mgmt.client.vo.ClientInfoVo">
+		INSERT
+			INTO 
+		NKM_CLIENT_INFO
+		(
+			IP_ADDR,
+			AUTH_TYPE,
+			NAME,
+			DESCRIPTION,
+			STATUS,
+			REG_DTTM,
+			REG_USER,
+			UPT_DTTM,
+			UPT_USER
+		)
+		VALUES(
+			#{IP_ADDR}, 
+			#{AUTH_TYPE},
+			#{NAME}, 
+			#{DESCRIPTION}, 
+			#{STATUS}, 
+			DEFAULT, 
+			#{REG_USER}, 
+			NULL, 
+			NULL
+		)
+	</insert>
+	
+	<select id="selectClientInfo" parameterType="string" resultType="com.tmonet.kms.mgmt.client.vo.ClientInfoVo">
+		SELECT * 
+		FROM 
+			NKM_CLIENT_INFO 
+		WHERE 
+			IP_ADDR = #{IP_ADDR}
+	</select>
+	
+	<update id="updateClientInfo" parameterType="com.tmonet.kms.mgmt.client.vo.ClientInfoVo">
+		UPDATE
+			NKM_CLIENT_INFO
+		SET
+			<if test="AUTH_TYPE != null">AUTH_TYPE = #{AUTH_TYPE},</if>
+			<if test="NAME != null">NAME = #{NAME},</if>
+			<if test="DESCRIPTION != null">DESCRIPTION = #{DESCRIPTION},</if>
+			<if test="STATUS != null">STATUS = #{STATUS},</if>
+			UPT_DTTM = SYSDATE(),
+			UPT_USER = #{UPT_USER}
+		WHERE
+			IP_ADDR = #{IP_ADDR}
+	</update>
+	<update id="updateClientInfoKey" parameterType="com.tmonet.kms.mgmt.client.vo.ClientInfoVo">
+		UPDATE
+			NKM_CLIENT_INFO
+		SET
+			KEY_ID = #{KEY_ID}
+		WHERE
+			IP_ADDR = #{IP_ADDR}
+	</update>
+	
+	<delete id="deleteClientInfo" parameterType="string">
+		DELETE
+		FROM
+			NKM_CLIENT_INFO
+		WHERE
+			IP_ADDR = #{IP_ADDR}
+	</delete>
+	
+	<delete id="deleteAllClientKey" parameterType="string">
+		DELETE
+		FROM
+			NKM_CLIENT_KEY_LIST
+		WHERE
+			IP_ADDR = #{IP_ADDR}
+	</delete>
+	
+	<delete id="deleteClientKey" parameterType="string">
+		DELETE
+		FROM
+			NKM_CLIENT_KEY_LIST
+		WHERE
+			KEY_ID = #{KEY_ID}
+	</delete>
+	
+	<insert id="insertClientKeyList" parameterType="com.tmonet.kms.mgmt.client.vo.ClientKeyListVo">
+		INSERT INTO 
+			NKM_CLIENT_KEY_LIST
+		(
+			KEY_ID,
+			IP_ADDR,
+			VALUE,
+			STATUS,
+			REG_DTTM,
+			REG_USER,
+			UPT_DTTM,
+			UPT_USER
+		)
+		VALUES(
+			#{KEY_ID},
+			#{IP_ADDR},
+			#{VALUE},
+			#{STATUS}, 
+			DEFAULT, 
+			#{REG_USER}, 
+			NULL, 
+			NULL
+		)
+	</insert>
+	
+	<select id="selectCliKeyId" resultType="string">
+		(SELECT CONCAT('CLI',LPAD(NEXTVAL(SEQ_CLIENT_KEY_ID),5,'0')))
+	</select>
+	
+	<update id="updateClientKeyList" parameterType="com.tmonet.kms.mgmt.client.vo.ClientKeyListVo">
+		UPDATE
+			NKM_CLIENT_KEY_LIST
+		SET
+			VALUE = #{VALUE},
+			UPT_DTTM = SYSDATE(),
+			UPT_USER = #{UPT_USER}
+		WHERE
+			KEY_NAME = #{KEY_NAME}
+	</update>
+	
+	<select id="selectClientKeyList" parameterType="string" resultType="com.tmonet.kms.mgmt.client.vo.ClientKeyListVo">
+		SELECT *
+		FROM
+			NKM_CLIENT_KEY_LIST
+		WHERE 
+			KEY_NAME = #{KEY_NAME}
+	</select>
+	
+	<select id="selectClientKeyListIp" parameterType="string" resultType="com.tmonet.kms.mgmt.client.vo.ClientKeyListVo">
+		SELECT *
+		FROM
+			NKM_CLIENT_KEY_LIST
+		WHERE 
+			KEY_ID = (
+					SELECT KEY_ID
+					FROM NKM_CLIENT_INFO
+					WHERE IP_ADDR = #{IP_ADDR}
+					)
+	</select>
+	
+	<insert id="insertClientHistory" parameterType="com.tmonet.kms.mgmt.client.vo.ClientHistoryVo">
+		INSERT INTO
+			NKM_CLIENT_HISTORY
+			(
+				HIST_NO,
+				IP_ADDR,
+				TYPE,
+				PARAM,
+				HMAC,
+				REG_DTTM,
+				REG_USER
+			)
+		VALUES
+			(
+				NEXTVAL(SEQ_CLIENT_HIST_NO),
+				#{IP_ADDR},
+				#{TYPE},
+				#{PARAM},
+				#{HMAC},
+				DEFAULT,
+				#{REG_USER}
+			)
+	</insert>
+	
+	<select id="selectAllClientInfo" resultType="com.tmonet.kms.mgmt.client.vo.ClientInfoVo">
+		SELECT * 
+		FROM 
+			NKM_CLIENT_INFO
+	</select>
+	
+	<delete id="deleteCliAuthInfo" parameterType="com.tmonet.kms.mgmt.client.vo.CliAuthInfoVo">
+		DELETE
+		FROM
+			NKM_CLI_AUTH_INFO
+		WHERE
+			IP_ADDR = #{IP_ADDR}
+			<if test="SERVICE_ID != null">AND SERVICE_ID = #{SERVICE_ID}</if>
+	</delete>
+	
+	<select id="selectAllCliAuthInfo" parameterType="string" resultType="com.tmonet.kms.mgmt.client.vo.CliAuthInfoVo">
+		SELECT *
+		FROM
+			NKM_CLI_AUTH_INFO
+		WHERE
+			IP_ADDR = #{IP_ADDR}
+	</select>
+	
+	<insert id="insertCliAuthHistory" parameterType="com.tmonet.kms.mgmt.client.vo.CliAuthHistoryVo">
+		INSERT INTO
+			NKM_CLI_AUTH_HISTORY
+			(
+				HIST_NO,
+				IP_ADDR,
+				SERVICE_ID,
+				TYPE,
+				PARAM,
+				HMAC,
+				REG_DTTM,
+				REG_USER
+			)
+		VALUES
+			(
+				NEXTVAL(SEQ_CLI_AUTH_HIST_NO),
+				#{IP_ADDR},
+				#{SERVICE_ID},
+				#{TYPE},
+				#{PARAM},
+				#{HMAC},
+				DEFAULT,
+				#{REG_USER}
+			)
+	</insert>
+	
+	<select id="selectAllClientKey" parameterType="string" resultType="com.tmonet.kms.mgmt.client.vo.ClientKeyListVo">
+		SELECT *
+		FROM
+			NKM_CLIENT_KEY_LIST
+		WHERE
+			IP_ADDR = #{IP_ADDR}
+	</select>
+	
+	<select id="selectAllClientKeyList" parameterType="com.tmonet.kms.mgmt.client.vo.ClientKeyListVo" resultType="com.tmonet.kms.mgmt.client.vo.ClientKeyListVo">
+		SELECT *
+		FROM
+			NKM_CLIENT_KEY_LIST
+		WHERE
+			IP_ADDR = #{IP_ADDR}
+			<if test="KEY_ID != null">AND KEY_ID = #{KEY_ID}</if>
+			<if test="STATUS != null">AND STATUS = #{STATUS}</if>
+	</select>
+	
+	<select id="selectPartitionInfo" parameterType="string" resultType="com.tmonet.kms.mgmt.partition.vo.PartitionInfoVo">
+		SELECT *
+		FROM
+			NKM_PARTITION_INFO
+		WHERE
+			SERVICE_ID = #{SERVICE_ID}
+	</select>
+	
+	<select id="selectCliAuthInfo" parameterType="com.tmonet.kms.mgmt.client.vo.CliAuthInfoVo" resultType="com.tmonet.kms.mgmt.client.vo.CliAuthInfoVo">
+		SELECT *
+		FROM
+			NKM_CLI_AUTH_INFO
+		WHERE
+			IP_ADDR = #{IP_ADDR} AND
+			SERVICE_ID = #{SERVICE_ID}
+	</select>
+	
+	<insert id="insertCliAuthInfo" parameterType="com.tmonet.kms.mgmt.client.vo.CliAuthInfoVo">
+		INSERT INTO
+			NKM_CLI_AUTH_INFO
+			(
+				IP_ADDR,
+				SERVICE_ID,
+				CREATE_YN,
+				READ_YN,
+				UPDATE_YN,
+				DELETE_YN,
+				REG_DTTM,
+				REG_USER,
+				UPT_DTTM,
+				UPT_USER
+			)
+			VALUES
+			(
+				#{IP_ADDR},
+				#{SERVICE_ID},
+				#{CREATE_YN},
+				#{READ_YN},
+				#{UPDATE_YN},
+				#{DELETE_YN},
+				DEFAULT,
+				#{REG_USER},
+				NULL,
+				NULL
+			)
+	</insert>
+	
+	<update id="updateCliAuthInfo" parameterType="com.tmonet.kms.mgmt.client.vo.CliAuthInfoVo">
+		UPDATE
+			NKM_CLI_AUTH_INFO
+		SET
+			<if test="CREATE_YN != null">CREATE_YN = #{CREATE_YN},</if>
+			<if test="READ_YN != null">READ_YN = #{READ_YN},</if>
+			<if test="UPDATE_YN != null">UPDATE_YN = #{UPDATE_YN},</if>
+			<if test="DELETE_YN != null">DELETE_YN = #{DELETE_YN},</if>
+			UPT_DTTM = SYSDATE(),
+			UPT_USER = #{UPT_USER}
+		WHERE
+			IP_ADDR = #{IP_ADDR} AND
+			SERVICE_ID = #{SERVICE_ID}
+	</update>
+	
+	<select id="selectClientKeyValue" parameterType="com.tmonet.kms.mgmt.client.vo.ClientKeyListVo" resultType="string">
+		SELECT
+			VALUE
+		FROM
+			NKM_CLIENT_KEY_LIST
+		WHERE
+			IP_ADDR = #{IP_ADDR} AND
+			STATUS = #{STATUS}
+	</select>
+	
+</mapper>
