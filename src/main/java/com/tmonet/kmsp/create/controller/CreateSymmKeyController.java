@@ -36,7 +36,7 @@ import com.tmonet.kmsp.create.vo.CreateSymmKeyResponsePayloadVo;
 
 @RestController("create.symmetricKey")
 @RequestMapping("/kmsp")
-public class CreateSymmKeyController {
+public class CreateSymmKeyController { 
 	
 	private static final Logger logger = LoggerFactory.getLogger(CreateSymmKeyController.class);
 	
